@@ -1,16 +1,16 @@
 <template>
   <div>
-    <HomePage />
+    <IntroContent />
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import HomePage from './components/views/HomePage.vue'
+import IntroContent from '../organisms/IntroContent.vue'
 export default defineComponent ({
-  name: 'App',
+  name: 'HomePage',
   components: {
-    HomePage
+    IntroContent
   }
 })
 </script>
