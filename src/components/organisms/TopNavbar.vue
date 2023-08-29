@@ -14,7 +14,7 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import NameAndLogo from "../molecules/NameAndLogo.vue"
-import TestSelection from "../molecules/TestSelection.vue"
+import TestSelection from "../organisms/TestSelection.vue"
 export default defineComponent({
   name: "TopNavbar",
   components: {
