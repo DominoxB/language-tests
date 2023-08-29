@@ -1,6 +1,6 @@
 <template>
   <div class="flex items-center">
-    <img src="../icons/logo.png" alt="logo" class="w-12 mr-2" />
+    <img src="../icons/logo.png" alt="logo" class="w-12 mr-4" />
     <span class="font-courgette text-2xl text-white">Lang4You</span>
   </div>
 </template>
