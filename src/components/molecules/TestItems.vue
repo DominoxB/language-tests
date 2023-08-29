@@ -1,8 +1,10 @@
 <template>
-  <div class="p-3 border w-32 flex items-center space-x-2 hover:bg-slate-500 text-white bg-black cursor-pointer"
-    v-for="test in tests" :key="test.id">
-    <img :src="test.icon" alt="flag" class="w-5 rounded-md" />
-    <span>{{ test.name }}</span>
+  <div class="mt-2 border absolute">
+    <div class="p-2 w-32 flex items-center hover:bg-slate-600 text-white bg-slate-800 cursor-pointer"
+      v-for="test in tests" :key="test.id">
+      <img :src="test.icon" alt="flag" class="w-5 mr-2" />
+      <span>{{ test.name }}</span>
+    </div>
   </div>
 </template>
 
