@@ -5,8 +5,9 @@
     <NameAndLogo />
     <div class="flex space-x-6 mr-8">
       <TestSelection />
-      <span>O nas</span>
-      <span>Language</span>
+      <span>{{ $t('aboutUs') }}</span>
+      <!-- to do: charger do zmiany języka -->
+      <span>Language</span> 
     </div>
   </div>
 </template>

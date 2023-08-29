@@ -10,18 +10,20 @@
 
 <script lang="ts">
 import { defineComponent } from "vue"
+import { useI18n } from 'vue-i18n'
 export default defineComponent({
   name: "TestItems",
   setup() {
+    const { t } = useI18n()
     const tests = [
       {
         id: 1,
-        name: 'Angielski',
+        name: t('english'),
         icon: "https://img.icons8.com/offices/30/great-britain.png"
       },
       {
         id: 2,
-        name: 'Rosyjski',
+        name: t('russian'),
         icon: 'https://img.icons8.com/offices/30/russian-federation.png'
       }
     ]
