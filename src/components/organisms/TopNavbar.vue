@@ -3,7 +3,7 @@
     class="bg-blue-500 px-8 py-4 flex justify-between items-center text-white font-open text-lg"
   >
     <NameAndLogo />
-    <div class="flex space-x-4 mr-8">
+    <div class="flex space-x-6 mr-8">
       <TestSelection />
       <span>O nas</span>
       <span>Language</span>
