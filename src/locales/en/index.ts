@@ -4,7 +4,7 @@ const en = {
   freepik1:'Image by',
   freepik2: 'Freepik',
   test: 'Select a test',
-  aboutUs: 'Abou us',
+  aboutUs: 'About us',
   english: 'English',
   russian: 'Russian'
 }

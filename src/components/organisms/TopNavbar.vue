@@ -3,11 +3,16 @@
     class="bg-blue-500 px-8 py-4 flex justify-between items-center text-white font-open text-lg"
   >
     <NameAndLogo />
-    <div class="flex space-x-6 mr-8">
+    <div class="flex space-x-10 mr-8">
       <TestSelection />
       <span>{{ $t('aboutUs') }}</span>
-      <!-- to do: charger do zmiany języka -->
-      <span>Language</span> 
+      <div id="charger" class="text-white">
+      <select v-model="$i18n.locale" class="cursor-pointer bg-blue-400">
+        <option v-for="locale in $i18n.availableLocales" :key="`locale-${locale}`" :value="locale">
+          {{ locale }}
+        </option>
+      </select>
+    </div>
     </div>
   </div>
 </template>
