@@ -1,18 +1,20 @@
 <template>
-  <div
-    class="w-full bg-test h-[550px] flex items-center justify-center font-open"
-  >
-    <div class="mx-[500px] text-center text-white">
-      <p class="text-[45px] mb-4 font-semibold">
-        {{ $t('question') }}
-      </p>
-      <div class="bg-blue-500 w-64 h-1 mx-auto mb-8"></div>
-      <p class="text-xl mb-8">
-        {{ $t('intro') }}
-      </p>
-      <ArrowDownBtn class="mx-auto"/>
-      <p class="opacity-30 text-right text-sm">{{ $t('freepik1') }} <a href="https://www.freepik.com/free-photo/public-examination-preparation-concept_25077294.htm#query=answer%20sheet&position=1&from_view=search&track=ais#position=1&query=answer%20sheet">{{ $t('freepik2') }}</a></p>
-    </div>
+  <div class="w-full bg-test h-[550px] flex items-center justify-center font-open">
+    <transition name="text" appear>
+      <div class="mx-[500px] text-center text-white">
+        <p class="text-[45px] mb-4 font-semibold">
+          {{ $t('question') }}
+        </p>
+        <div class="bg-blue-500 w-64 h-1 mx-auto mb-8"></div>
+        <p class="text-xl mb-8">
+          {{ $t('intro') }}
+        </p>
+        <ArrowDownBtn class="mx-auto animate-bounce" />
+        <p class="opacity-30 text-right text-sm">{{ $t('freepik1') }} <a
+            href="https://www.freepik.com/free-photo/public-examination-preparation-concept_25077294.htm#query=answer%20sheet&position=1&from_view=search&track=ais#position=1&query=answer%20sheet">{{
+              $t('freepik2') }}</a></p>
+      </div>
+    </transition>
   </div>
 </template>
 
@@ -26,3 +28,14 @@ export default defineComponent({
   }
 })
 </script>
+
+<style scoped>
+.text-enter-active {
+  transition: all 1s ease;
+}
+
+.text-enter-from {
+  opacity: 0;
+  transform: translateX(500px);
+}
+</style>
