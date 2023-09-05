@@ -6,7 +6,11 @@ const en = {
   test: 'Select a test',
   aboutUs: 'About us',
   english: 'English',
-  russian: 'Russian'
+  russian: 'Russian',
+  why: 'Why you should choose Lang4You?',
+  experience: "Our tests have been prepared by experienced teachers and tutors. Their many years of observation allowed them to prepare tests that show the student's level of advancement in various sections of the language.",
+  free: 'You can check your language level without any fees or even the need to register an account. Everything is done quickly, without unnecessary formalities.',
+  result: 'After completing the test, you receive your score with the correct answers, as well as your language level. Thanks to this, without unnecessary waiting, you can find out what level you are at.'
 }
 
 export default en;
