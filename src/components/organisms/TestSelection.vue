@@ -24,8 +24,7 @@ export default defineComponent({
   setup() {
     const isOpen = ref(false)
     const dropdown = ref(null)
-    onClickOutside(dropdown, (event) => {
-      console.log(event)
+    onClickOutside(dropdown, () => {
       isOpen.value = false
     })
     return {
