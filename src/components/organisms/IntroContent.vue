@@ -1,6 +1,6 @@
 <template>
   <div class="w-full bg-test h-[550px] flex items-center justify-center font-open">
-    <transition name="text" appear>
+    <transition name="text" appear enter-active-class="transition-all duration-1000 ease-in" enter-from-class="opacity-0 translate-x-[500px]">
       <div class="mx-[500px] text-center text-white">
         <p class="text-[45px] mb-4 font-semibold">
           {{ $t('question') }}
@@ -19,23 +19,12 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue"
+import { defineComponent } from 'vue'
 import ArrowDownBtn from '../atoms/ArrowDownBtn.vue'
 export default defineComponent({
-  name: "IntroContent",
+  name: 'IntroContent',
   components: {
     ArrowDownBtn
   }
 })
 </script>
-
-<style scoped>
-.text-enter-active {
-  transition: all 1s ease;
-}
-
-.text-enter-from {
-  opacity: 0;
-  transform: translateX(500px);
-}
-</style>
