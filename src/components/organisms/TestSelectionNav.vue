@@ -17,7 +17,7 @@ import { onClickOutside } from '@vueuse/core'
 import TestItems from '../molecules/TestItems.vue'
 
 export default defineComponent({
-  name: 'TestSelection',
+  name: 'TestSelectionNav',
   components: {
     TestItems
   },

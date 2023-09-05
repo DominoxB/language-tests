@@ -4,7 +4,7 @@
   >
     <NameAndLogo />
     <div class="flex space-x-10 mr-8">
-      <TestSelection />
+      <TestSelectionNav />
       <span>{{ $t('aboutUs') }}</span>
       <div id="charger" class="text-white">
       <select v-model="$i18n.locale" class="cursor-pointer bg-blue-500">
@@ -20,12 +20,12 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import NameAndLogo from '../molecules/NameAndLogo.vue'
-import TestSelection from '../organisms/TestSelection.vue'
+import TestSelectionNav from '../organisms/TestSelectionNav.vue'
 export default defineComponent({
   name: 'TopNavbar',
   components: {
     NameAndLogo,
-    TestSelection,
+    TestSelectionNav,
   },
 })
 </script>
