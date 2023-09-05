@@ -19,10 +19,10 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue"
+import { defineComponent } from 'vue'
 import ArrowDownBtn from '../atoms/ArrowDownBtn.vue'
 export default defineComponent({
-  name: "IntroContent",
+  name: 'IntroContent',
   components: {
     ArrowDownBtn
   }

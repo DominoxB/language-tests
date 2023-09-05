@@ -18,11 +18,11 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
-import NameAndLogo from "../molecules/NameAndLogo.vue"
-import TestSelection from "../organisms/TestSelection.vue"
+import { defineComponent } from 'vue'
+import NameAndLogo from '../molecules/NameAndLogo.vue'
+import TestSelection from '../organisms/TestSelection.vue'
 export default defineComponent({
-  name: "TopNavbar",
+  name: 'TopNavbar',
   components: {
     NameAndLogo,
     TestSelection,

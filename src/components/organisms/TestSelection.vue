@@ -11,13 +11,13 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from "vue"
+import { defineComponent, ref } from 'vue'
 import { onClickOutside } from '@vueuse/core'
 
-import TestItems from "../molecules/TestItems.vue"
+import TestItems from '../molecules/TestItems.vue'
 
 export default defineComponent({
-  name: "TestSelection",
+  name: 'TestSelection',
   components: {
     TestItems
   },
