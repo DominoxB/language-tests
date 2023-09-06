@@ -10,7 +10,10 @@ const pl = {
   why: 'Dlaczego powinieneś wybrać Lang4You?',
   experience: 'Nasze testy przygotowane zostały przez doświadczonych nauczycieli i korepetytorów. Ich wieloletnie obserwacje pozwoliły przygototwać testy, które pokazują stopień zaawansowania ucznia w różnych działach języka.',
   free: 'Możesz sprawdzić swój poziom językowy bez żadnych opłat ani nawet potrzeby rejestracji konta. Wszystko odbywa się szybko, bez zbędnych formalności.',
-  result: 'Po wykonaniu testu otrzymujesz swój wynik wraz z poprawnymi odpowiedziami, a także określeniem Twojego poziomu językowego. Dzięki temu bez zbędnego czekania możesz dowiedzieć się, na jakim poziomie jesteś.'
+  result: 'Po wykonaniu testu otrzymujesz swój wynik wraz z poprawnymi odpowiedziami, a także określeniem Twojego poziomu językowego. Dzięki temu bez zbędnego czekania możesz dowiedzieć się, na jakim poziomie jesteś.',
+  testDown: 'Wybierz test i sprawdź swój poziom zaawansowania:',
+  solve: 'Rozwiąż test'
+
 }
 
 export default pl;
