@@ -12,7 +12,8 @@ const pl = {
   free: 'Możesz sprawdzić swój poziom językowy bez żadnych opłat ani nawet potrzeby rejestracji konta. Wszystko odbywa się szybko, bez zbędnych formalności.',
   result: 'Po wykonaniu testu otrzymujesz swój wynik wraz z poprawnymi odpowiedziami, a także określeniem Twojego poziomu językowego. Dzięki temu bez zbędnego czekania możesz dowiedzieć się, na jakim poziomie jesteś.',
   testDown: 'Wybierz test i sprawdź swój poziom zaawansowania:',
-  solve: 'Rozwiąż test'
+  solve: 'Rozwiąż test',
+  footer: 'Copyright © 2023 - Wydawnictwo Languagino'
 
 }
 

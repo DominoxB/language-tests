@@ -12,7 +12,8 @@ const en = {
   free: 'You can check your language level without any fees or even the need to register an account. Everything is done quickly, without unnecessary formalities.',
   result: 'After completing the test, you receive your score with the correct answers, as well as your language level. Thanks to this, without unnecessary waiting, you can find out what level you are at.',
   testDown: 'Choose a test and check your language level:',
-  solve: 'Solve a test'
+  solve: 'Solve a test',
+  footer: 'Copyright © 2023 - Languagino Publishing House'
 }
 
 export default en;
