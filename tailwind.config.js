@@ -9,6 +9,7 @@ module.exports = {
       },
       backgroundImage: {
         test: "url('@/img/answer-sheet1.jpg')",
+        english: "url('@/img/english.jpg')"
       },
     },
   },
