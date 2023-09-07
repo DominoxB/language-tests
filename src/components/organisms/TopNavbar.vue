@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-blue-500 px-8 py-4 flex justify-between items-center text-white font-open text-lg"
+    class="bg-blue-500 px-8 py-4 flex justify-between items-center text-white font-open text-lg top-0 sticky"
   >
     <NameAndLogo />
     <div class="flex space-x-10 mr-8">
