@@ -1,16 +1,13 @@
 <template>
-  <div>
-    <HomePage />
-  </div>
+  <top-navbar />
+  <router-view></router-view>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import HomePage from '../src/views/HomePage.vue'
+import TopNavbar from './components/organisms/TopNavbar.vue';
 export default defineComponent ({
-  name: 'App',
-  components: {
-    HomePage
-  }
+    name: 'App',
+    components: { TopNavbar }
 })
 </script>
