@@ -2,7 +2,9 @@
   <div class="bg-slate-100 font-open pb-16 text-center">
     <h3 class="text-[27px] pt-8">{{ $t('testDown') }}</h3>
     <div class="flex justify-center mt-12 space-x-16">
-      <TestSelectionDownItem :name="$t('english')" flag="https://img.icons8.com/offices/30/great-britain.png" />
+      <router-link to="/EnglishPage">
+        <TestSelectionDownItem :name="$t('english')" flag="https://img.icons8.com/offices/30/great-britain.png" />
+      </router-link>
       <TestSelectionDownItem :name="$t('russian')" flag="https://img.icons8.com/offices/30/russian-federation.png" />
     </div>
   </div>
