@@ -6,8 +6,8 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import TopNavbar from './components/organisms/TopNavbar.vue';
-export default defineComponent ({
-    name: 'App',
-    components: { TopNavbar }
+export default defineComponent({
+  name: 'App',
+  components: { TopNavbar }
 })
 </script>

@@ -5,7 +5,7 @@
       <img src="@/icons/single-down-arrow.png" alt="arrow" class="w-4 h-4 ml-1 mt-px" />
     </div>
     <div v-if="isOpen">
-      <TestItems @click="isOpen = !isOpen"/>
+      <TestItems @click="isOpen = !isOpen" />
     </div>
   </div>
 </template>
@@ -28,7 +28,7 @@ export default defineComponent({
       isOpen.value = false
     })
     return {
-      isOpen, 
+      isOpen,
       dropdown
     }
   }
