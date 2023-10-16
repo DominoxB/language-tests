@@ -5,7 +5,9 @@
       <router-link to="/EnglishPage">
         <TestSelectionDownItem :name="$t('english')" flag="https://img.icons8.com/offices/30/great-britain.png" />
       </router-link>
-      <TestSelectionDownItem :name="$t('russian')" flag="https://img.icons8.com/offices/30/russian-federation.png" />
+      <router-link to="/RussianPage">
+        <TestSelectionDownItem :name="$t('russian')" flag="https://img.icons8.com/offices/30/russian-federation.png" />
+      </router-link>
     </div>
   </div>
 </template>
