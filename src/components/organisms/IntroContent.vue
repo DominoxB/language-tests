@@ -1,6 +1,7 @@
 <template>
   <div class="w-full bg-test h-[550px] flex items-center justify-center font-open">
-    <transition name="text" appear enter-active-class="transition-all duration-1000 ease-in" enter-from-class="opacity-0 translate-x-[500px]">
+    <transition name="text" appear enter-active-class="transition-all duration-1000 ease-in"
+      enter-from-class="opacity-0 translate-x-[500px]">
       <div class="mx-[500px] text-center text-white">
         <p class="text-[45px] mb-4 font-semibold">
           {{ $t('question') }}

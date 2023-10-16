@@ -14,7 +14,7 @@ import AboutUs from '@/components/organisms/AboutUs.vue'
 import TestSelectionDown from '@/components/organisms/TestSelectionDown.vue'
 import Footer from '@/components/atoms/Footer.vue'
 
-export default defineComponent ({
+export default defineComponent({
   name: 'HomePage',
   components: {
     IntroContent,
