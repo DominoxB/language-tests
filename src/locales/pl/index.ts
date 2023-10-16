@@ -13,7 +13,10 @@ const pl = {
   result: 'Po wykonaniu testu otrzymujesz swój wynik wraz z poprawnymi odpowiedziami, a także określeniem Twojego poziomu językowego. Dzięki temu bez zbędnego czekania możesz dowiedzieć się, na jakim poziomie jesteś.',
   testDown: 'Wybierz test i sprawdź swój poziom zaawansowania:',
   solve: 'Rozwiąż test',
-  footer: 'Copyright © 2023 - Wydawnictwo Languagino'
+  footer: 'Copyright © 2023 - Wydawnictwo Languagino',
+  englishTile: 'język angielski',
+  russianTile: 'język rosyjski',
+  check: 'Sprawdź swój poziom!'
 
 }
 

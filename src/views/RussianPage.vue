@@ -1,6 +1,6 @@
 <template>
   <div class="bg-russian h-[550px] w-full flex items-center justify-center">
-    <LanguageTile title="język rosyjski" icon="https://png.pngtree.com/png-clipart/20230916/original/pngtree-russian-flag-round-vector-png-image_12250405.png" />
+    <LanguageTile :title="$t('russianTile')" icon="https://png.pngtree.com/png-clipart/20230916/original/pngtree-russian-flag-round-vector-png-image_12250405.png" />
   </div>
 </template>
 

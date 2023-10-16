@@ -13,7 +13,10 @@ const en = {
   result: 'After completing the test, you receive your score with the correct answers, as well as your language level. Thanks to this, without unnecessary waiting, you can find out what level you are at.',
   testDown: 'Choose a test and check your language level:',
   solve: 'Solve a test',
-  footer: 'Copyright © 2023 - Languagino Publishing House'
+  footer: 'Copyright © 2023 - Languagino Publishing House',
+  englishTile: 'English',
+  russianTile: 'Russian',
+  check: 'Check your level!'
 }
 
 export default en;
