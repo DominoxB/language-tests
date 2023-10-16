@@ -10,7 +10,7 @@
         <p class="text-xl mb-8">
           {{ $t('intro') }}
         </p>
-        <ArrowDownBtn class="mx-auto animate-bounce" />
+        <ArrowDownBtn class="mx-auto animate-bounce" @scroll="scrollDown" />
         <p class="opacity-30 text-right text-sm">{{ $t('freepik1') }} <a
             href="https://www.freepik.com/free-photo/public-examination-preparation-concept_25077294.htm#query=answer%20sheet&position=1&from_view=search&track=ais#position=1&query=answer%20sheet">{{
               $t('freepik2') }}</a></p>
@@ -26,6 +26,15 @@ export default defineComponent({
   name: 'IntroContent',
   components: {
     ArrowDownBtn
+  },
+  setup() {
+    const scrollDown = () => {
+      const myScroll = document.getElementById("myScroll")
+      myScroll?.scrollIntoView({ behavior: "smooth", block: 'center' })
+    }
+    return {
+      scrollDown
+    }
   }
 })
 </script>
