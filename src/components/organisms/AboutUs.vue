@@ -13,17 +13,17 @@
       <img src="https://cdn-icons-png.flaticon.com/128/6571/6571437.png" alt="result" class="mr-10 h-24" />
       <p>{{ $t('result') }}</p>
     </div>
-    <ArrowDownBtn class="mx-auto animate-bounce" @scroll="scrollEnd"/>
+    <BtnArrowDown class="mx-auto animate-bounce" @scroll="scrollEnd"/>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import ArrowDownBtn from '../atoms/ArrowDownBtn.vue'
+import BtnArrowDown from '../atoms/BtnArrowDown.vue'
 export default defineComponent({
   name: 'AboutUs',
   components: {
-    ArrowDownBtn
+    BtnArrowDown
   },
   setup() {
     const scrollEnd = () => {
