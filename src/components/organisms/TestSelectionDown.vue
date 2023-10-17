@@ -9,16 +9,19 @@
         <TestSelectionDownItem :name="$t('russian')" flag="https://img.icons8.com/offices/30/russian-federation.png" />
       </router-link>
     </div>
+    <BtnScrollToTop class="absolute right-3"/>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
 import TestSelectionDownItem from '../atoms/TestSelectionDownItem.vue'
+import BtnScrollToTop from '../atoms/BtnScrollToTop.vue';
 export default defineComponent({
   name: 'TestSelectionDown',
   components: {
-    TestSelectionDownItem
-  }
+    TestSelectionDownItem,
+    BtnScrollToTop
+}
 })
 </script>
