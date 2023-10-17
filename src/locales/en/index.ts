@@ -16,7 +16,12 @@ const en = {
   footer: 'Copyright © 2023 - Languagino Publishing House',
   englishTile: 'English',
   russianTile: 'Russian',
-  check: 'Check your level!'
+  check: 'Check your level!',
+  wantEnglish: 'Do you want to check your English level?',
+  info1: 'We have prepared a test for you consisting of 30 questions. They contain topics from levels A1 to C1. Thanks to such a wide range of questions, we will be able to determine how well you cope with vocabulary and grammar different levels of advancement. There is nothing to be afraid of :) - taking the test is the first step towards achieving it the goal of knowing a foreign language.',
+  info2: 'You have an unlimited amount of time to take the test, but this does not mean that you can use help or look for information online. You take the test to find out your current foreign language level. Thanks to this, you will learn what your learning path should look like.',
+  info3: 'Remember that only one answer is correct, there are no multiple choice questions.',
+  start: 'Start the test'
 }
 
 export default en;
