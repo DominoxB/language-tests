@@ -9,7 +9,7 @@
         <TestSelectionDownItem :name="$t('russian')" flag="https://img.icons8.com/offices/30/russian-federation.png" />
       </router-link>
     </div>
-    <BtnScrollToTop class="absolute right-3"/>
+    <BtnScrollToTop class="absolute right-3" @scroll="scrollToTop" />
   </div>
 </template>
 
@@ -22,6 +22,14 @@ export default defineComponent({
   components: {
     TestSelectionDownItem,
     BtnScrollToTop
-}
+  },
+  setup() {
+    const scrollToTop = () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    }
+    return {
+      scrollToTop
+    }
+  }
 })
 </script>
