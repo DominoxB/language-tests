@@ -3,19 +3,19 @@
     <LanguageTile :title="$t('englishTile')"
       icon="https://png.pngtree.com/png-vector/20211101/ourmid/pngtree-round-country-flag-united-kingdom-png-image_4019312.png" />
   </div>
-  <InfoEnglish />
+  <InfoTest />
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
 import LanguageTile from '@/components/atoms/LanguageTile.vue'
-import InfoEnglish from '@/components/organisms/InfoEnglish.vue'
+import InfoTest from '@/components/organisms/InfoTest.vue'
 
 export default defineComponent({
   name: 'EnglishPage',
   components: {
     LanguageTile,
-    InfoEnglish,
+    InfoTest,
 }
 })
 </script>
