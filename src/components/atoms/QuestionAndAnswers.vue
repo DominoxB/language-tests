@@ -1,17 +1,18 @@
 <template>
   <div class="font-open px-96 py-4">
-    <span class="text-2xl">{{ question }}</span>
+    <div class="text-2xl">
+      {{ number }} {{ question }}
+    </div>
     <div class="flex items-center justify-center space-x-16 text-lg border-2 border-blue-300 rounded-lg py-4 px-4 my-4">
-      <input type="radio" :value="answerA" /> 
+      <input type="radio" :value="answerA" />
       {{ answerA }}
-      <input type="radio" :value="answerB" /> 
+      <input type="radio" :value="answerB" />
       {{ answerB }}
-      <input type="radio" :value="answerC" /> 
+      <input type="radio" :value="answerC" />
       {{ answerC }}
-      <input type="radio" :value="answerD" /> 
+      <input type="radio" :value="answerD" />
       {{ answerD }}
     </div>
-
   </div>
 </template>
 
@@ -20,6 +21,10 @@ import { defineComponent } from 'vue'
 export default defineComponent({
   name: 'QuestionAndAnswers',
   props: {
+    number: {
+      type: String,
+      required: true
+    },
     question: {
       type: String,
       required: true
