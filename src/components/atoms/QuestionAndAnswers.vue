@@ -1,9 +1,15 @@
 <template>
-  <div class="font-open">
+  <div class="font-open px-96 py-4">
     <span class="text-2xl">{{ question }}</span>
-    <div class="flex items-center space-x-6 text-lg border-2 border-blue-300 rounded-lg py-2 px-4 my-4">
-      <input type="radio" :value="answer" class="mr-1" /> 
-      {{ answer }}
+    <div class="flex items-center justify-center space-x-16 text-lg border-2 border-blue-300 rounded-lg py-4 px-4 my-4">
+      <input type="radio" :value="answerA" /> 
+      {{ answerA }}
+      <input type="radio" :value="answerB" /> 
+      {{ answerB }}
+      <input type="radio" :value="answerC" /> 
+      {{ answerC }}
+      <input type="radio" :value="answerD" /> 
+      {{ answerD }}
     </div>
 
   </div>
@@ -18,10 +24,24 @@ export default defineComponent({
       type: String,
       required: true
     },
-    answer: {
+    answerA: {
+      type: String,
+      required: true
+    },
+    answerB: {
+      type: String,
+      required: true
+    },
+    answerC: {
+      type: String,
+      required: true
+    },
+    answerD: {
       type: String,
       required: true
     }
+
+
   }
 })
 </script>
