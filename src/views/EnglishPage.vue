@@ -15,7 +15,7 @@ export default defineComponent({
   name: 'EnglishPage',
   components: {
     LanguageTile,
-    InfoEnglish
-  }
+    InfoEnglish,
+}
 })
 </script>

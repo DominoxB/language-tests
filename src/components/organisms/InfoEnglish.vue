@@ -8,19 +8,17 @@
       <BtnStart class="mt-4" @scroll="showTest" />
     </div>
   </div>
-  <IntroContent id="myScroll" v-if="test" />
+  <div id="myScroll" v-if="test">testowy element</div>
 </template>
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue'
 import BtnStart from '@/components/atoms/BtnStart.vue'
-import IntroContent from '@/components/organisms/IntroContent.vue';
 
 export default defineComponent({
   name: 'InfoEnglish',
   components: {
     BtnStart,
-    IntroContent
   },
   setup() {
     const test = ref(false)
