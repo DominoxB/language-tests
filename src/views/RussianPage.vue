@@ -3,16 +3,19 @@
     <LanguageTile :title="$t('russianTile')"
       icon="https://png.pngtree.com/png-clipart/20230916/original/pngtree-russian-flag-round-vector-png-image_12250405.png" />
   </div>
+  <InfoTest />
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import LanguageTile from '@/components/atoms/LanguageTile.vue';
+import LanguageTile from '@/components/atoms/LanguageTile.vue'
+import InfoTest from '@/components/organisms/InfoTest.vue'
 
 export default defineComponent({
   name: 'RussianPage',
   components: {
-    LanguageTile
+    LanguageTile,
+    InfoTest
   }
 })
 </script>
