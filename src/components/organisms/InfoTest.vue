@@ -1,6 +1,7 @@
 <template>
   <div class="font-open border-2 border-blue-200 p-10 my-20 mx-64">
-    <h1 class="text-3xl">{{ $t('wantEnglish') }}</h1>
+    <div class="text-3xl" v-if="path === '/EnglishPage'">{{ $t('wantEnglish') }}</div>
+    <div class="text-3xl" v-else>{{ $t('wantRussian') }}</div>
     <p class="py-6">{{ $t('info1') }}</p>
     <p>{{ $t('info2') }}</p>
     <p class="py-6">{{ $t('info3') }}</p>
@@ -13,6 +14,7 @@
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue'
+import { useRoute } from 'vue-router'
 import BtnStart from '@/components/atoms/BtnStart.vue'
 
 export default defineComponent({
@@ -22,6 +24,8 @@ export default defineComponent({
   },
   setup() {
     const test = ref(false)
+    const route = useRoute()
+    const path = route.path
     const scrollToTest = () => {
       const myScroll = document.getElementById("myScroll")
       myScroll?.scrollIntoView({ behavior: "smooth", block: 'center' })
@@ -36,7 +40,8 @@ export default defineComponent({
     }
     return {
       test,
-      showTest
+      showTest,
+      path
     }
   }
 })
