@@ -9,7 +9,7 @@
       <BtnStart class="mt-4" @scroll="showTest" />
     </div>
   </div>
-  <TestSheet id="myScroll" v-if="test" />
+  <TestSheet id="myScroll" v-if="test" class="scroll-mt-24"/>
 </template>
 
 <script lang="ts">
