@@ -9,18 +9,20 @@
       <BtnStart class="mt-4" @scroll="showTest" />
     </div>
   </div>
-  <div id="myScroll" v-if="test">testowy element</div>
+  <TestSheet id="myScroll" v-if="test" />
 </template>
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue'
 import { useRoute } from 'vue-router'
 import BtnStart from '@/components/atoms/BtnStart.vue'
+import TestSheet from './TestSheet.vue'
 
 export default defineComponent({
   name: 'InfoEnglish',
   components: {
     BtnStart,
+    TestSheet
   },
   setup() {
     const test = ref(false)
