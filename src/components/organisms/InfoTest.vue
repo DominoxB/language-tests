@@ -30,7 +30,7 @@ export default defineComponent({
     const path = route.path
     const scrollToTest = () => {
       const myScroll = document.getElementById("myScroll")
-      myScroll?.scrollIntoView({ behavior: "smooth", block: 'center' })
+      myScroll?.scrollIntoView({ behavior: "smooth" })
     }
 
     const showTest = () => {
