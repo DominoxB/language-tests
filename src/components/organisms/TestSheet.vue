@@ -14,39 +14,16 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import { useQuestionEnglishStore } from '@/stores/testEnglish'
 import QuestionAndAnswers from '../atoms/QuestionAndAnswers.vue'
 
 export default defineComponent({
   name: 'TestSheet',
   components: { QuestionAndAnswers },
   setup() {
-    const questions = [
-      {
-        n: '1. ',
-        q: 'Hello, how are you today?',
-        a: 'Thank you Mark, I am fine!',
-        b: 'No, I do not go there.',
-        c: 'Thank you, that is all.',
-        d: 'You are welcome.'
-      },
-      {
-        n: '2. ',
-        q: 'Hello, how are you today?',
-        a: 'Thank you Mark, I am fine!',
-        b: 'No, I do not go there.',
-        c: 'Thank you, that is all.',
-        d: 'You are welcome.'
-      },
-      {
-        n: '3. ',
-        q: 'Hello, how are you today?',
-        a: 'Thank you Mark, I am fine!',
-        b: 'No, I do not go there.',
-        c: 'Thank you, that is all.',
-        d: 'You are welcome.'
-      },
+    const store = useQuestionEnglishStore();
+    const { questions } = store;
 
-    ]
     return { questions }
   }
 })

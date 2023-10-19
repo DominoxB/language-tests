@@ -1,5 +1,5 @@
 import { defineStore } from "pinia";
-export const useProductStore = defineStore("EnglishQuestions", {
+export const useQuestionEnglishStore = defineStore("EnglishQuestions", {
   state: () => ({
     questions: [
       {
