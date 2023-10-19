@@ -4,13 +4,13 @@
       {{ number }} {{ question }}
     </div>
     <div class="flex items-center justify-center space-x-16 text-lg border-2 border-blue-300 rounded-lg py-4 px-4 my-4">
-      <input type="radio" :value="answerA" />
+      <input type="radio" :value="answerA" name="answer" />
       {{ answerA }}
-      <input type="radio" :value="answerB" />
+      <input type="radio" :value="answerB" name="answer" />
       {{ answerB }}
-      <input type="radio" :value="answerC" />
+      <input type="radio" :value="answerC" name="answer" />
       {{ answerC }}
-      <input type="radio" :value="answerD" />
+      <input type="radio" :value="answerD" name="answer" />
       {{ answerD }}
     </div>
   </div>
