@@ -1,7 +1,7 @@
 import { defineStore } from "pinia";
 export const useQuestionEnglishStore = defineStore("EnglishQuestions", {
   state: () => ({
-    questions: [
+    questionsEn: [
       {
         n: "1. ",
         q: "Hello, how are you today?",
