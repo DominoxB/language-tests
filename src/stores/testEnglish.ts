@@ -1,5 +1,6 @@
 import { defineStore } from "pinia";
 export const useQuestionEnglishStore = defineStore("EnglishQuestions", {
+  // API simulation (mocked data)
   state: () => ({
     questionsEn: [
       {
