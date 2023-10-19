@@ -7,7 +7,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent, onMounted } from 'vue'
 import LanguageTile from '@/components/atoms/LanguageTile.vue'
 import InfoTest from '@/components/organisms/InfoTest.vue'
 
@@ -16,6 +16,11 @@ export default defineComponent({
   components: {
     LanguageTile,
     InfoTest,
-}
+  },
+  setup() {
+    onMounted(() => {
+      window.scrollTo(0, 0)
+    })
+  }
 })
 </script>
