@@ -8,7 +8,9 @@
       :answerA="question.a" 
       :answerB="question.b" 
       :answerC="question.c" 
-      :answerD="question.d" />
+      :answerD="question.d" 
+      :correct="question.correct">
+    </QuestionAndAnswers>
   </div>
   <div v-else>
     <QuestionAndAnswers 
@@ -19,12 +21,13 @@
       :answerA="question.a" 
       :answerB="question.b" 
       :answerC="question.c" 
-      :answerD="question.d" />
+      :answerD="question.d" 
+      :correct="question.correct" />
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent, ref } from 'vue'
 import { useQuestionEnglishStore } from '@/stores/testEnglish'
 import { useQuestionRussianStore } from '@/stores/testRussian'
 import { useRoute } from 'vue-router'
@@ -43,10 +46,11 @@ export default defineComponent({
     const { questionsEn } = storeEn
     const { questionsRu } = storeRu
 
+
     return { 
       questionsEn, 
       questionsRu, 
-      path 
+      path,
     }
   }
 })
