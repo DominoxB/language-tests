@@ -7,7 +7,7 @@
       <div>
         <input type="radio" 
           :id="answerA" 
-          :value="answerA" 
+          value="a" 
           :name="question" 
           v-model="selected" />
         {{ answerA }}
@@ -16,7 +16,7 @@
       <div>
         <input type="radio" 
           :id="answerB" 
-          :value="answerB" 
+          value="b" 
           :name="question" 
           v-model="selected" />
         {{ answerB }}
@@ -25,7 +25,7 @@
       <div>
         <input type="radio" 
           :id="answerC" 
-          :value="answerC" 
+          value="c" 
           :name="question" 
           v-model="selected" />
         {{ answerC }}
@@ -34,13 +34,14 @@
       <div>
          <input type="radio" 
           :id="answerD" 
-          :value="answerD" 
+          value="d" 
           :name="question" 
           v-model="selected" />
         {{ answerD }}
         <label for="answerD" />
       </div>
     </div>
+    <div class="bg-pink-400 h-10 w-full" v-if="correct === selected"></div>
   </div>
 </template>
 
@@ -72,10 +73,13 @@ export default defineComponent({
     answerD: {
       type: String,
       required: true
+    },
+    correct: {
+      type: String
     }
   },
   setup() {
-    const selected = ref(null);
+    const selected = ref('')
     return {
       selected
     }
