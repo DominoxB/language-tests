@@ -28,7 +28,7 @@ export const useQuestionEnglishStore = defineStore("EnglishQuestions", {
         b: "more sweet than",
         c: "sweeter",
         d: "sweeter than",
-        correct: 'c'
+        correct: 'd'
       },
       {
         id: 4,
