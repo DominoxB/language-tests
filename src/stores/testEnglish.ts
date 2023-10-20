@@ -10,6 +10,7 @@ export const useQuestionEnglishStore = defineStore("EnglishQuestions", {
         b: "No, I don't go there.",
         c: "Thank you, that is all.",
         d: "You are welcome.",
+        correct: 'a'
       },
       {
         id: 2,
@@ -18,6 +19,7 @@ export const useQuestionEnglishStore = defineStore("EnglishQuestions", {
         b: "and 3 cats",
         c: "and 2 dogs",
         d: "or many cats.",
+        correct: 'c'
       },
       {
         id: 3,
@@ -26,6 +28,7 @@ export const useQuestionEnglishStore = defineStore("EnglishQuestions", {
         b: "more sweet than",
         c: "sweeter",
         d: "sweeter than",
+        correct: 'c'
       },
       {
         id: 4,
@@ -34,6 +37,7 @@ export const useQuestionEnglishStore = defineStore("EnglishQuestions", {
         b: "no, many",
         c: "any, a lot of",
         d: "the, much",
+        correct: 'c'
       },
       {
         id: 5,
@@ -42,6 +46,7 @@ export const useQuestionEnglishStore = defineStore("EnglishQuestions", {
         b: "him",
         c: "his",
         d: "he's",
+        correct: 'b'
       },
       {
         id: 6,
@@ -50,6 +55,7 @@ export const useQuestionEnglishStore = defineStore("EnglishQuestions", {
         b: "was",
         c: "were",
         d: "did",
+        correct: 'b'
       },
       {
         id: 7,
@@ -58,6 +64,7 @@ export const useQuestionEnglishStore = defineStore("EnglishQuestions", {
         b: "use to spend",
         c: "used to spend",
         d: "was used to spend",
+        correct: 'c'
       },
       {
         id: 8,
@@ -66,6 +73,7 @@ export const useQuestionEnglishStore = defineStore("EnglishQuestions", {
         b: "better, worse",
         c: "the better, the worse",
         d: "bester, worser",
+        correct: 'b'
       },
       {
         id: 9,
@@ -74,6 +82,7 @@ export const useQuestionEnglishStore = defineStore("EnglishQuestions", {
         b: "Did you ever seen",
         c: "Have you ever seed",
         d: "Have you ever seen",
+        correct: 'd'
       },
       {
         id: 10,
@@ -82,6 +91,7 @@ export const useQuestionEnglishStore = defineStore("EnglishQuestions", {
         b: "on, in, in",
         c: "to, on, in",
         d: "at, to, in",
+        correct: 'a'
       },
       {
         id: 11,
@@ -90,6 +100,7 @@ export const useQuestionEnglishStore = defineStore("EnglishQuestions", {
         b: "as well",
         c: "as me",
         d: "either",
+        correct: 'd'
       },
       {
         id: 12,
@@ -98,6 +109,7 @@ export const useQuestionEnglishStore = defineStore("EnglishQuestions", {
         b: "woman, men, children",
         c: "women, man, children",
         d: "women, men, children",
+        correct: 'c'
       },
       {
         id: 13,
@@ -106,6 +118,7 @@ export const useQuestionEnglishStore = defineStore("EnglishQuestions", {
         b: "have been sleeping",
         c: "had slept",
         d: "was sleeping",
+        correct: 'd'
       },
       {
         id: 14,
@@ -114,6 +127,7 @@ export const useQuestionEnglishStore = defineStore("EnglishQuestions", {
         b: "a thief",
         c: "a fork",
         d: "a spoon",
+        correct: 'b'
       },
       {
         id: 15,
@@ -122,6 +136,7 @@ export const useQuestionEnglishStore = defineStore("EnglishQuestions", {
         b: "to get dressed",
         c: "to fall asleep",
         d: "to fall down",
+        correct: 'c'
       },
       {
         id: 16,
@@ -130,14 +145,16 @@ export const useQuestionEnglishStore = defineStore("EnglishQuestions", {
         b: "had just been going out",
         c: "has just gone out",
         d: "was just gone out",
+        correct: 'a'
       },
       {
         id: 17,
-        q: "Jane and Tom _ 15.This question is required.",
+        q: "Jane and Tom _ 15.",
         a: "will",
         b: "are",
         c: "have",
         d: "is",
+        correct: 'b'
       },
       {
         id: 18,
@@ -146,6 +163,7 @@ export const useQuestionEnglishStore = defineStore("EnglishQuestions", {
         b: "am sitting",
         c: "will be sitting",
         d: "will be sat",
+        correct: 'c'
       },
       {
         id: 19,
@@ -154,6 +172,7 @@ export const useQuestionEnglishStore = defineStore("EnglishQuestions", {
         b: "When I’ll find",
         c: "If I find",
         d: "If I’ll find",
+        correct: 'c'
       },
       {
         id: 20,
@@ -162,6 +181,7 @@ export const useQuestionEnglishStore = defineStore("EnglishQuestions", {
         b: "isn't",
         c: "didn't",
         d: "don't",
+        correct: 'c'
       },
       {
         id: 21,
@@ -170,6 +190,7 @@ export const useQuestionEnglishStore = defineStore("EnglishQuestions", {
         b: "is going cooking",
         c: "goes to cook",
         d: "is going to cook",
+        correct: 'd'
       },
       {
         id: 22,
@@ -178,6 +199,7 @@ export const useQuestionEnglishStore = defineStore("EnglishQuestions", {
         b: "had met, would have warned",
         c: "had met, had warned",
         d: "met, had warned",
+        correct: 'b'
       },
       {
         id: 23,
@@ -186,6 +208,7 @@ export const useQuestionEnglishStore = defineStore("EnglishQuestions", {
         b: "will write, will know",
         c: "would write, knew",
         d: "would write, had known",
+        correct: 'c'
       },
       {
         id: 24,
@@ -194,6 +217,7 @@ export const useQuestionEnglishStore = defineStore("EnglishQuestions", {
         b: "isn't it",
         c: "does it",
         d: "doesn't it",
+        correct: 'b'
       },
       {
         id: 25,
@@ -202,6 +226,7 @@ export const useQuestionEnglishStore = defineStore("EnglishQuestions", {
         b: "himself",
         c: "by himself",
         d: "on his own",
+        correct: 'b'
       },
       {
         id: 26,
@@ -210,6 +235,7 @@ export const useQuestionEnglishStore = defineStore("EnglishQuestions", {
         b: "Both them",
         c: "Both of them",
         d: "Both they",
+        correct: 'c'
       },
       {
         id: 27,
@@ -218,6 +244,7 @@ export const useQuestionEnglishStore = defineStore("EnglishQuestions", {
         b: "plumber",
         c: "roofer",
         d: "tailor",
+        correct: 'b'
       },
       {
         id: 28,
@@ -226,6 +253,7 @@ export const useQuestionEnglishStore = defineStore("EnglishQuestions", {
         b: "Cross your thumbs for me!",
         c: "Keep your fingers crossed for me!",
         d: "Keep your thumbs crossed for me!",
+        correct: 'c'
       },
       {
         id: 29,
@@ -234,6 +262,7 @@ export const useQuestionEnglishStore = defineStore("EnglishQuestions", {
         b: "The exam was very stressful.",
         c: "The exam was very easy.",
         d: "The exam was about food.",
+        correct: 'c'
       },
       {
         id: 30,
@@ -242,6 +271,7 @@ export const useQuestionEnglishStore = defineStore("EnglishQuestions", {
         b: "had borrowed",
         c: "borrowed",
         d: "would borrow",
+        correct: 'b'
       },
 
     ],
