@@ -2,8 +2,8 @@
   <div v-if="path === '/EnglishPage'">
     <QuestionAndAnswers 
       v-for="question in questionsEn" 
-      :key="question.n" 
-      :number="question.n" 
+      :key="question.id" 
+      :id="question.id" 
       :question="question.q"
       :answerA="question.a" 
       :answerB="question.b" 
@@ -13,8 +13,8 @@
   <div v-else>
     <QuestionAndAnswers 
       v-for="question in questionsRu" 
-      :key="question.n" 
-      :number="question.n" 
+      :key="question.id" 
+      :id="question.id" 
       :question="question.q"
       :answerA="question.a" 
       :answerB="question.b" 
