@@ -11,6 +11,7 @@ export const useQuestionRussianStore = defineStore("RussianQuestions", {
         b: "мне на",
         c: "меня на",
         d: "меня",
+        correct: 'c'
       },
       {
         id: 2,
@@ -19,6 +20,7 @@ export const useQuestionRussianStore = defineStore("RussianQuestions", {
         b: "Вас",
         c: "Вами",
         d: "Bашу",
+        correct: 'b'
       },
       {
         id: 3,
@@ -27,6 +29,7 @@ export const useQuestionRussianStore = defineStore("RussianQuestions", {
         b: "этим",
         c: "этот",
         d: "этомy",
+        correct: 'a'
       },
       {
         id: 4,
@@ -35,6 +38,7 @@ export const useQuestionRussianStore = defineStore("RussianQuestions", {
         b: "вашей тёте",
         c: "вашей тётей",
         d: "вашу тёти",
+        correct: 'b'
       },
       {
         id: 5,
@@ -43,6 +47,7 @@ export const useQuestionRussianStore = defineStore("RussianQuestions", {
         b: "живём",
         c: "живёте",
         d: "живёт",
+        correct: 'a'
       },
       {
         id: 6,
@@ -51,6 +56,7 @@ export const useQuestionRussianStore = defineStore("RussianQuestions", {
         b: "учатся",
         c: "учим",
         d: "учат",
+        correct: 'c'
       },
       {
         id: 7,
@@ -59,6 +65,7 @@ export const useQuestionRussianStore = defineStore("RussianQuestions", {
         b: "по русски",
         c: "по-русски",
         d: "русски",
+        correct: 'c'
       },
       {
         id: 8,
@@ -67,6 +74,7 @@ export const useQuestionRussianStore = defineStore("RussianQuestions", {
         b: "с",
         c: "из",
         d: "y",
+        correct: 'b'
       },
       {
         id: 9,
@@ -75,6 +83,7 @@ export const useQuestionRussianStore = defineStore("RussianQuestions", {
         b: "смотрила",
         c: "смотрил",
         d: "смотри",
+        correct: 'a'
       },
       {
         id: 10,
@@ -83,6 +92,7 @@ export const useQuestionRussianStore = defineStore("RussianQuestions", {
         b: "часы",
         c: "час",
         d: "часа",
+        correct: 'd'
       },
       {
         id: 11,
@@ -91,6 +101,7 @@ export const useQuestionRussianStore = defineStore("RussianQuestions", {
         b: "через",
         c: "в",
         d: "по",
+        correct: 'a'
       },
       {
         id: 12,
@@ -99,6 +110,7 @@ export const useQuestionRussianStore = defineStore("RussianQuestions", {
         b: "бухгалтер",
         c: "бухгалтерим",
         d: "бухгалтером",
+        correct: 'd'
       },
       {
         id: 13,
@@ -107,6 +119,7 @@ export const useQuestionRussianStore = defineStore("RussianQuestions", {
         b: "ехaли",
         c: "едят",
         d: "едут",
+        correct: 'd'
       },
       {
         id: 14,
@@ -115,6 +128,7 @@ export const useQuestionRussianStore = defineStore("RussianQuestions", {
         b: "моему",
         c: "мои",
         d: "моим",
+        correct: 'b'
       },
       {
         id: 15,
@@ -123,6 +137,7 @@ export const useQuestionRussianStore = defineStore("RussianQuestions", {
         b: "там",
         c: "ту",
         d: "здесь",
+        correct: 'a'
       },
       {
         id: 16,
@@ -131,6 +146,7 @@ export const useQuestionRussianStore = defineStore("RussianQuestions", {
         b: "третьим",
         c: "три",
         d: "третьем",
+        correct: 'd'
       },
       {
         id: 17,
@@ -139,6 +155,7 @@ export const useQuestionRussianStore = defineStore("RussianQuestions", {
         b: "больший",
         c: "больши",
         d: "большой",
+        correct: 'd'
       },
       {
         id: 18,
@@ -147,6 +164,7 @@ export const useQuestionRussianStore = defineStore("RussianQuestions", {
         b: "истори",
         c: "истории",
         d: "историе",
+        correct: 'c'
       },
       {
         id: 19,
@@ -155,6 +173,7 @@ export const useQuestionRussianStore = defineStore("RussianQuestions", {
         b: "синую",
         c: "сину",
         d: "синюю",
+        correct: 'd'
       },
       {
         id: 20,
@@ -163,6 +182,7 @@ export const useQuestionRussianStore = defineStore("RussianQuestions", {
         b: "пo своим детям",
         c: "до своих детей",
         d: "к своим детям",
+        correct: 'a'
       },
       {
         id: 21,
@@ -171,6 +191,7 @@ export const useQuestionRussianStore = defineStore("RussianQuestions", {
         b: "ней",
         c: "её",
         d: "eю",
+        correct: 'a'
       },
       {
         id: 22,
@@ -179,6 +200,7 @@ export const useQuestionRussianStore = defineStore("RussianQuestions", {
         b: "зарегистрировать",
         c: "зарегистрироватecь",
         d: "зарегистрироваться",
+        correct: 'b'
       },
       {
         id: 23,
@@ -187,6 +209,7 @@ export const useQuestionRussianStore = defineStore("RussianQuestions", {
         b: "что",
         c: "что-нибудь",
         d: "что-то",
+        correct: 'a'
       },
       {
         id: 24,
@@ -195,6 +218,7 @@ export const useQuestionRussianStore = defineStore("RussianQuestions", {
         b: "себя",
         c: "на себя",
         d: "друг на друга",
+        correct: 'd'
       },
       {
         id: 25,
@@ -203,6 +227,7 @@ export const useQuestionRussianStore = defineStore("RussianQuestions", {
         b: "времени",
         c: "време",
         d: "времена",
+        correct: 'b'
       },
       {
         id: 26,
@@ -211,6 +236,7 @@ export const useQuestionRussianStore = defineStore("RussianQuestions", {
         b: "спортсменом",
         c: "спортсменоми",
         d: "спортсменам",
+        correct: 'd'
       },
       {
         id: 27,
@@ -219,6 +245,7 @@ export const useQuestionRussianStore = defineStore("RussianQuestions", {
         b: "радием",
         c: "радие",
         d: "радиом",
+        correct: 'a'
       },
       {
         id: 28,
@@ -227,6 +254,7 @@ export const useQuestionRussianStore = defineStore("RussianQuestions", {
         b: "паспорты",
         c: "паспорт",
         d: "паспорта",
+        correct: 'd'
       },
       {
         id: 29,
@@ -235,6 +263,7 @@ export const useQuestionRussianStore = defineStore("RussianQuestions", {
         b: "улыбке",
         c: "улыбкo",
         d: "улыбку",
+        correct: 'd'
       },
       {
         id: 30,
@@ -243,6 +272,7 @@ export const useQuestionRussianStore = defineStore("RussianQuestions", {
         b: "выходит",
         c: "cпpocит",
         d: "задаёт",
+        correct: 'a'
       }
     ]
   })
