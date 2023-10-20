@@ -5,7 +5,7 @@ export const useQuestionRussianStore = defineStore("RussianQuestions", {
   state: () => ({
     questionsRu: [
       {
-        n: "1. ",
+        id: 1,
         q: "Твой друг моложе _______ три года?",
         a: "от меня на",
         b: "мне на",
@@ -13,7 +13,7 @@ export const useQuestionRussianStore = defineStore("RussianQuestions", {
         d: "меня",
       },
       {
-        n: "2. ",
+        id: 2,
         q: "Как _______ зовут?",
         a: "Вам",
         b: "Вас",
@@ -21,7 +21,7 @@ export const useQuestionRussianStore = defineStore("RussianQuestions", {
         d: "Bашу",
       },
       {
-        n: "3. ",
+        id: 3,
         q: "Ваша соседка живёт в _______ доме?",
         a: "этом",
         b: "этим",
@@ -29,7 +29,7 @@ export const useQuestionRussianStore = defineStore("RussianQuestions", {
         d: "этомy",
       },
       {
-        n: "4. ",
+        id: 4,
         q: "Сколько лет _______?",
         a: "вашу тётю",
         b: "вашей тёте",
@@ -37,7 +37,7 @@ export const useQuestionRussianStore = defineStore("RussianQuestions", {
         d: "вашу тёти",
       },
       {
-        n: "5. ",
+        id: 5,
         q: "Ты _______ в большом городе.",
         a: "живёшь",
         b: "живём",
@@ -45,7 +45,7 @@ export const useQuestionRussianStore = defineStore("RussianQuestions", {
         d: "живёт",
       },
       {
-        n: "6. ",
+        id: 6,
         q: "Мы _______ испанский язык уже 6 лет.",
         a: "учимся",
         b: "учатся",
@@ -53,7 +53,7 @@ export const useQuestionRussianStore = defineStore("RussianQuestions", {
         d: "учат",
       },
       {
-        n: "7. ",
+        id: 7,
         q: "Дома я говорю только _______.",
         a: "по-русский",
         b: "по русски",
@@ -61,7 +61,7 @@ export const useQuestionRussianStore = defineStore("RussianQuestions", {
         d: "русски",
       },
       {
-        n: "8. ",
+        id: 8,
         q: "Сейчас мы вернулись _______ вокзала.",
         a: "от",
         b: "с",
@@ -69,7 +69,7 @@ export const useQuestionRussianStore = defineStore("RussianQuestions", {
         d: "y",
       },
       {
-        n: "9. ",
+        id: 9,
         q: "Вечером мама _______ свой любимый фильм.",
         a: "смотрела",
         b: "смотрила",
@@ -77,7 +77,7 @@ export const useQuestionRussianStore = defineStore("RussianQuestions", {
         d: "смотри",
       },
       {
-        n: "10. ",
+        id: 10,
         q: "Давай встретимся в четыре _______ дня.",
         a: "часов",
         b: "часы",
@@ -85,7 +85,7 @@ export const useQuestionRussianStore = defineStore("RussianQuestions", {
         d: "часа",
       },
       {
-        n: "11. ",
+        id: 11,
         q: "Ольга прочитала книгу _______ два часа.",
         a: "за",
         b: "через",
@@ -93,7 +93,7 @@ export const useQuestionRussianStore = defineStore("RussianQuestions", {
         d: "по",
       },
       {
-        n: "12. ",
+        id: 12,
         q: "Мой отец работает _______.",
         a: "бухгалтерем",
         b: "бухгалтер",
@@ -101,7 +101,7 @@ export const useQuestionRussianStore = defineStore("RussianQuestions", {
         d: "бухгалтером",
       },
       {
-        n: "13. ",
+        id: 13,
         q: "Куда они _______ в этом году в отпуск?",
         a: "едет",
         b: "ехaли",
@@ -109,7 +109,7 @@ export const useQuestionRussianStore = defineStore("RussianQuestions", {
         d: "едут",
       },
       {
-        n: "14. ",
+        id: 14,
         q: "_______ другу нравится рок-музыка.",
         a: "моей",
         b: "моему",
@@ -117,7 +117,7 @@ export const useQuestionRussianStore = defineStore("RussianQuestions", {
         d: "моим",
       },
       {
-        n: "15. ",
+        id: 15,
         q: "Ты поедешь _______ на будущей неделе?",
         a: "туда",
         b: "там",
@@ -125,7 +125,7 @@ export const useQuestionRussianStore = defineStore("RussianQuestions", {
         d: "здесь",
       },
       {
-        n: "16. ",
+        id: 16,
         q: "Аптека находится на _______ этаже.",       
         a: "третем",
         b: "третьим",
@@ -133,7 +133,7 @@ export const useQuestionRussianStore = defineStore("RussianQuestions", {
         d: "третьем",
       },
       {
-        n: "17. ",
+        id: 17,
         q: "В этой квартире _______ балкон?",       
         a: "большие",
         b: "больший",
@@ -141,7 +141,7 @@ export const useQuestionRussianStore = defineStore("RussianQuestions", {
         d: "большой",
       },
       {
-        n: "18. ",
+        id: 18,
         q: "По вторникам у нас экзамены по _______.", 
         a: "историю",   
         b: "истори",
@@ -149,7 +149,7 @@ export const useQuestionRussianStore = defineStore("RussianQuestions", {
         d: "историе",
       },
       {
-        n: "19. ",
+        id: 19,
         q: "Сегодня я одета в _______ юбку.",
         a: "синей",
         b: "синую",
@@ -157,7 +157,7 @@ export const useQuestionRussianStore = defineStore("RussianQuestions", {
         d: "синюю",
       },
       {
-        n: "20. ",
+        id: 20,
         q: "Родители любят звонить _______.",       
         a: "своим детям",
         b: "пo своим детям",
@@ -165,7 +165,7 @@ export const useQuestionRussianStore = defineStore("RussianQuestions", {
         d: "к своим детям",
       },
       {
-        n: "21. ",
+        id: 21,
         q: "Благодаря _______ мы нашли новую работу.",
         a: "ей",
         b: "ней",
@@ -173,7 +173,7 @@ export const useQuestionRussianStore = defineStore("RussianQuestions", {
         d: "eю",
       },
       {
-        n: "22. ",
+        id: 22,
         q: "В этой стране необходимо _______ свой брак в ЗАГСе.", 
         a: "регистрировать",
         b: "зарегистрировать",
@@ -181,7 +181,7 @@ export const useQuestionRussianStore = defineStore("RussianQuestions", {
         d: "зарегистрироваться",
       },
       {
-        n: "23. ",
+        id: 23,
         q: "Что ты молчишь! Скажи _______.",       
         a: "что-либо",
         b: "что",
@@ -189,7 +189,7 @@ export const useQuestionRussianStore = defineStore("RussianQuestions", {
         d: "что-то",
       },
       {
-        n: "24. ",
+        id: 24,
         q: "Сёстры похожи _______.",       
         a: " друг друга",
         b: "себя",
@@ -197,7 +197,7 @@ export const useQuestionRussianStore = defineStore("RussianQuestions", {
         d: "друг на друга",
       },
       {
-        n: "25. ",
+        id: 25,
         q: "Время от _______ я хожу в парикмахерскую, чтобы побриться.",
         a: "время",  
         b: "времени",
@@ -205,7 +205,7 @@ export const useQuestionRussianStore = defineStore("RussianQuestions", {
         d: "времена",
       },
       {
-        n: "26. ",
+        id: 26,
         q: "Мы считаем, что _______ слишком много платят.",
         a: "спортсменами",
         b: "спортсменом",
@@ -213,7 +213,7 @@ export const useQuestionRussianStore = defineStore("RussianQuestions", {
         d: "спортсменам",
       },
       {
-        n: "27. ",
+        id: 27,
         q: "Что вы сделали с моим _______.",
         a: "радио",
         b: "радием",
@@ -221,7 +221,7 @@ export const useQuestionRussianStore = defineStore("RussianQuestions", {
         d: "радиом",
       },
       {
-        n: "28. ",
+        id: 28,
         q: "Ведь знаю, что на границе проверяют _______.",
         a: "паспорти",
         b: "паспорты",
@@ -229,7 +229,7 @@ export const useQuestionRussianStore = defineStore("RussianQuestions", {
         d: "паспорта",
       },
       {
-        n: "29. ",
+        id: 29,
         q: "Радуга всегда вызывает у меня _______.",
         a: "улыбкой",
         b: "улыбке",
@@ -237,7 +237,7 @@ export const useQuestionRussianStore = defineStore("RussianQuestions", {
         d: "улыбку",
       },
       {
-        n: "30. ",
+        id: 30,
         q: "Чаще всего масса вопросов _______ в начале бизнеса.",
         a: "возникает",
         b: "выходит",

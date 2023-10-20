@@ -4,7 +4,7 @@ export const useQuestionEnglishStore = defineStore("EnglishQuestions", {
   state: () => ({
     questionsEn: [
       {
-        n: "1. ",
+        id: 1,
         q: "Hello, how are you today?",
         a: "Thank you Mark, I am fine!",
         b: "No, I don't go there.",
@@ -12,7 +12,7 @@ export const useQuestionEnglishStore = defineStore("EnglishQuestions", {
         d: "You are welcome.",
       },
       {
-        n: "2. ",
+        id: 2,
         q: "Richard has 1 cat ___.",
         a: "but 2 cats",
         b: "and 3 cats",
@@ -20,7 +20,7 @@ export const useQuestionEnglishStore = defineStore("EnglishQuestions", {
         d: "or many cats.",
       },
       {
-        n: "3. ",
+        id: 3,
         q: "This apple tastes ___ the red one.",
         a: "more sweet",
         b: "more sweet than",
@@ -28,7 +28,7 @@ export const useQuestionEnglishStore = defineStore("EnglishQuestions", {
         d: "sweeter than",
       },
       {
-        n: "4. ",
+        id: 4,
         q: "I don’t have ___ brothers and sisters but I have ___ friends.",
         a: "no, some",
         b: "no, many",
@@ -36,7 +36,7 @@ export const useQuestionEnglishStore = defineStore("EnglishQuestions", {
         d: "the, much",
       },
       {
-        n: "5. ",
+        id: 5,
         q: "I don’t know ___ .",
         a: "he",
         b: "him",
@@ -44,7 +44,7 @@ export const useQuestionEnglishStore = defineStore("EnglishQuestions", {
         d: "he's",
       },
       {
-        n: "6. ",
+        id: 6,
         q: "I ___ born in 1992.",
         a: "am",
         b: "was",
@@ -52,7 +52,7 @@ export const useQuestionEnglishStore = defineStore("EnglishQuestions", {
         d: "did",
       },
       {
-        n: "7. ",
+        id: 7,
         q: "When I was a child, I ___ my holiday in the country.",
         a: "spend",
         b: "use to spend",
@@ -60,7 +60,7 @@ export const useQuestionEnglishStore = defineStore("EnglishQuestions", {
         d: "was used to spend",
       },
       {
-        n: "8. ",
+        id: 8,
         q: "She is ___ at maths, but ___ at English.",
         a: "gooder, bader",
         b: "better, worse",
@@ -68,7 +68,7 @@ export const useQuestionEnglishStore = defineStore("EnglishQuestions", {
         d: "bester, worser",
       },
       {
-        n: "9. ",
+        id: 9,
         q: "___ any film by Almodovar?",
         a: "Did you ever see",
         b: "Did you ever seen",
@@ -76,7 +76,7 @@ export const useQuestionEnglishStore = defineStore("EnglishQuestions", {
         d: "Have you ever seen",
       },
       {
-        n: "10. ",
+        id: 10,
         q: "Where do you go ___ holiday – ___ the seaside or ___ the mountains?",
         a: "on, to, to",
         b: "on, in, in",
@@ -84,7 +84,7 @@ export const useQuestionEnglishStore = defineStore("EnglishQuestions", {
         d: "at, to, in",
       },
       {
-        n: "11. ",
+        id: 11,
         q: "I don’t smoke. My wife ___ .",
         a: "too",
         b: "as well",
@@ -92,7 +92,7 @@ export const useQuestionEnglishStore = defineStore("EnglishQuestions", {
         d: "either",
       },
       {
-        n: "12. ",
+        id: 12,
         q: "There were two ___ , one ___ and four ___ in the room.",
         a: "womans, man, childs",
         b: "woman, men, children",
@@ -100,7 +100,7 @@ export const useQuestionEnglishStore = defineStore("EnglishQuestions", {
         d: "women, men, children",
       },
       {
-        n: "13. ",
+        id: 13,
         q: "I ___ when the telephone rang.",
         a: "slept",
         b: "have been sleeping",
@@ -108,7 +108,7 @@ export const useQuestionEnglishStore = defineStore("EnglishQuestions", {
         d: "was sleeping",
       },
       {
-        n: "14. ",
+        id: 14,
         q: "Which word does not belong with the others?",
         a: "a knife",
         b: "a thief",
@@ -116,7 +116,7 @@ export const useQuestionEnglishStore = defineStore("EnglishQuestions", {
         d: "a spoon",
       },
       {
-        n: "15. ",
+        id: 15,
         q: "What is the opposite of ‘to wake up’?",
         a: "to get up",
         b: "to get dressed",
@@ -124,7 +124,7 @@ export const useQuestionEnglishStore = defineStore("EnglishQuestions", {
         d: "to fall down",
       },
       {
-        n: "16. ",
+        id: 16,
         q: "When I came to the party last night, Alice ___ .",
         a: "had just gone out",
         b: "had just been going out",
@@ -132,7 +132,7 @@ export const useQuestionEnglishStore = defineStore("EnglishQuestions", {
         d: "was just gone out",
       },
       {
-        n: "17. ",
+        id: 17,
         q: "Jane and Tom _ 15.This question is required.",
         a: "will",
         b: "are",
@@ -140,7 +140,7 @@ export const useQuestionEnglishStore = defineStore("EnglishQuestions", {
         d: "is",
       },
       {
-        n: "18. ",
+        id: 18,
         q: "This time tomorrow I ___ on the beach.",
         a: "sit",
         b: "am sitting",
@@ -148,7 +148,7 @@ export const useQuestionEnglishStore = defineStore("EnglishQuestions", {
         d: "will be sat",
       },
       {
-        n: "19. ",
+        id: 19,
         q: "___ your wallet, I’ll let you know.",
         a: "When I found",
         b: "When I’ll find",
@@ -156,7 +156,7 @@ export const useQuestionEnglishStore = defineStore("EnglishQuestions", {
         d: "If I’ll find",
       },
       {
-        n: "20. ",
+        id: 20,
         q: "She _ do her homework.",
         a: "wasn't",
         b: "isn't",
@@ -164,7 +164,7 @@ export const useQuestionEnglishStore = defineStore("EnglishQuestions", {
         d: "don't",
       },
       {
-        n: "21. ",
+        id: 21,
         q: "Sarah _ dinner tonight.",
         a: "will go cooking",
         b: "is going cooking",
@@ -172,7 +172,7 @@ export const useQuestionEnglishStore = defineStore("EnglishQuestions", {
         d: "is going to cook",
       },
       {
-        n: "22. ",
+        id: 22,
         q: "If I ___ Jack that day, I ___ him.",
         a: "met, would warn",
         b: "had met, would have warned",
@@ -180,7 +180,7 @@ export const useQuestionEnglishStore = defineStore("EnglishQuestions", {
         d: "met, had warned",
       },
       {
-        n: "23. ",
+        id: 23,
         q: "He said he ___ an e-mail when he ___ more details.",
         a: "writes, knows",
         b: "will write, will know",
@@ -188,7 +188,7 @@ export const useQuestionEnglishStore = defineStore("EnglishQuestions", {
         d: "would write, had known",
       },
       {
-        n: "24. ",
+        id: 24,
         q: "It’s a lovely day today, ___ ?",
         a: "is it",
         b: "isn't it",
@@ -196,7 +196,7 @@ export const useQuestionEnglishStore = defineStore("EnglishQuestions", {
         d: "doesn't it",
       },
       {
-        n: "25. ",
+        id: 25,
         q: "He ___ doesn’t believe he’ll manage it.",
         a: "lonely",
         b: "himself",
@@ -204,7 +204,7 @@ export const useQuestionEnglishStore = defineStore("EnglishQuestions", {
         d: "on his own",
       },
       {
-        n: "26. ",
+        id: 26,
         q: "___ enjoy massive events.",
         a: "Them both",
         b: "Both them",
@@ -212,7 +212,7 @@ export const useQuestionEnglishStore = defineStore("EnglishQuestions", {
         d: "Both they",
       },
       {
-        n: "27. ",
+        id: 27,
         q: "This leaking pipe needs to be repaired. Call the ___, please.",
         a: "carpenter",
         b: "plumber",
@@ -220,7 +220,7 @@ export const useQuestionEnglishStore = defineStore("EnglishQuestions", {
         d: "tailor",
       },
       {
-        n: "28. ",
+        id: 28,
         q: "I’m doing my exam today.",
         a: "Cross your fingers for me!",
         b: "Cross your thumbs for me!",
@@ -228,7 +228,7 @@ export const useQuestionEnglishStore = defineStore("EnglishQuestions", {
         d: "Keep your thumbs crossed for me!",
       },
       {
-        n: "29. ",
+        id: 29,
         q: "What does the sentence ‘The exam was a piece of cake’ mean?",
         a: "The exam was very difficult.",
         b: "The exam was very stressful.",
@@ -236,7 +236,7 @@ export const useQuestionEnglishStore = defineStore("EnglishQuestions", {
         d: "The exam was about food.",
       },
       {
-        n: "30. ",
+        id: 30,
         q: "If you ___ my notes last year, you would have passed the exam.",
         a: "have borrowed",
         b: "had borrowed",
