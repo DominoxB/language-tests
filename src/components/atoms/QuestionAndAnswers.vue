@@ -1,7 +1,7 @@
 <template>
   <div class="font-open px-96 py-4">
     <div class="text-2xl">
-      {{ number }} {{ question }}
+      {{ `${id + '. '} ` }} {{ question }}
     </div>
     <div class="flex items-center justify-center space-x-16 text-lg border-2 border-blue-300 rounded-lg py-4 px-4 my-4">
       <div>
@@ -49,8 +49,8 @@ import { defineComponent, ref } from 'vue'
 export default defineComponent({
   name: 'QuestionAndAnswers',
   props: {
-    number: {
-      type: String,
+    id: {
+      type: Number,
       required: true
     },
     question: {
