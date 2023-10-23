@@ -1,5 +1,5 @@
 <template>
-  <button class="bg-blue-200 py-2 px-6 rounded-md border border-blue-400 hover:bg-blue-300" @click="$emit('scroll', 'next')" >
+  <button class="bg-blue-200 py-2 px-6 rounded-2xl border border-blue-400 hover:bg-blue-300" @click="$emit('scroll')" >
     {{ name }}
   </button>
 </template>
@@ -14,6 +14,6 @@ export default defineComponent({
       required: true
     }
   },
-  emits: ['scroll', 'next']
+  emits: ['scroll']
 })
 </script>

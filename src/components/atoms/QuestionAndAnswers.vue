@@ -3,7 +3,7 @@
     <div class="text-2xl">
       {{ `${id + '. '} ` }} {{ question }}
     </div>
-    <div class="flex items-center justify-center space-x-16 text-lg border-2 border-blue-300 rounded-lg py-4 px-4 my-4">
+    <div class="flex items-center justify-center space-x-16 text-lg border-2 border-blue-300 rounded-2xl py-4 px-4 my-4">
       <div>
         <input type="radio" 
           :id="answerA" 
