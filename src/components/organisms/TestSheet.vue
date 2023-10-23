@@ -5,7 +5,9 @@
         :answerC="question.c" :answerD="question.d" :correct="question.correct">
       </QuestionAndAnswers>
     </div>
-    <BtnNext :name="$t('next')" class="flex mx-auto mb-6" @next="showNextQ" />
+    <div class="flex justify-end mx-96">
+      <BtnNext :name="$t('next')" class="flex mb-6" @next="showNextQ" />
+    </div>
   </div>
   <div v-else>
     <div v-for="question in questionsRu" :key="question.id">
