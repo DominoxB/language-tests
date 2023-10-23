@@ -23,7 +23,8 @@ const en = {
   info3: 'Remember that only one answer is correct, there are no multiple choice questions.',
   start: 'Start the test',
   wantRussian:'Do you want to check your Russian level?',
-  next: 'Next'
+  next: 'Next',
+  previous: 'Previous'
 }
 
 export default en;

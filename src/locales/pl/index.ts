@@ -23,7 +23,8 @@ const pl = {
   info3: 'Pamiętaj, że tylko jedna odpowiedź jest poprawna, nie ma tu pytań wielokrotnego wyboru.',
   start: 'Rozpocznij test',
   wantRussian: 'Chcesz sprawdzić poziom języka rosyjskiego?',
-  next: 'Dalej'
+  next: 'Dalej',
+  previous: 'Wstecz'
 }
 
 export default pl;
