@@ -1,8 +1,7 @@
 <template>
   <div class="flex justify-center items-center font-open">
-  <button class="flex items-center bg-blue-200 rounded-2xl border border-blue-400 hover:bg-blue-300 px-4 py-2" @click="$emit('next')" >
+  <button class="flex items-center bg-blue-200 rounded-2xl border border-blue-400 hover:bg-blue-300 px-12 py-3" @click="$emit('action')" >
     {{ name }}
-    <img src="@/icons/arrow-right.png" alt="arrow" class="w-8 h-8 ml-2"/>
   </button>
 </div>
 </template>
@@ -17,6 +16,6 @@ export default defineComponent({
       required: true
     }
   },
-  emits: ['next']
+  emits: ['action']
 })
 </script>
