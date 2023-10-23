@@ -27,7 +27,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue'
+import { defineComponent } from 'vue'
 import { useQuestionEnglishStore } from '@/stores/testEnglish'
 import { useQuestionRussianStore } from '@/stores/testRussian'
 import { useRoute } from 'vue-router'
