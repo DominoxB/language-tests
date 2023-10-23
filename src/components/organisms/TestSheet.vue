@@ -5,8 +5,9 @@
         :answerC="question.c" :answerD="question.d" :correct="question.correct">
       </QuestionAndAnswers>
     </div>
-    <div class="flex justify-end mx-96">
-      <BtnNext :name="$t('next')" class="flex mb-6" @next="showNextQ" />
+    <div class="flex justify-between mx-96">
+      <BtnNext :name="$t('previous')" class="flex mb-6" @action="showPreviousQ"/>
+      <BtnNext :name="$t('next')" class="flex mb-6" @action="showNextQ" />
     </div>
   </div>
   <div v-else>
@@ -54,13 +55,23 @@ export default defineComponent({
         scrollToBeggining()
       }, 100)
     }
+
+    const showPreviousQ = () => {
+      start.value -= 10
+      end.value -= 10
+      setTimeout(() => {
+        scrollToBeggining()
+      }, 100)
+    }
+
     return {
       questionsEn,
       questionsRu,
       path,
-      showNextQ,
       start,
-      end
+      end,
+      showNextQ,
+      showPreviousQ,
     }
   }
 })
