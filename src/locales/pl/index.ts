@@ -22,7 +22,8 @@ const pl = {
   info2: 'Na rozwiązanie testu masz nieograniczoną ilość czasu, nie oznacza to jednak, że możesz korzystać z pomocy lub szukać informacji online. Test wykonujesz po to, aby poznać poziom języka obcego jaki reprezentujesz w danej chwili. Dzięki temu dowiesz się, jak powinna wyglądać Twoja ścieżka nauki.',
   info3: 'Pamiętaj, że tylko jedna odpowiedź jest poprawna, nie ma tu pytań wielokrotnego wyboru.',
   start: 'Rozpocznij test',
-  wantRussian: 'Chcesz sprawdzić poziom języka rosyjskiego?'
+  wantRussian: 'Chcesz sprawdzić poziom języka rosyjskiego?',
+  next: 'Dalej'
 }
 
 export default pl;

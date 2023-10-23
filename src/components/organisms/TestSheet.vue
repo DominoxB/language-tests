@@ -12,7 +12,7 @@
       :answerD="question.d" 
       :correct="question.correct">
     </QuestionAndAnswers>
-    <BtnStart name="Dalej"/>
+    <BtnStart :name="$t('next')"/>
   </div>
   <div v-else>
     <QuestionAndAnswers 

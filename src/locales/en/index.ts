@@ -22,7 +22,8 @@ const en = {
   info2: 'You have an unlimited amount of time to take the test, but this does not mean that you can use help or look for information online. You take the test to find out your current foreign language level. Thanks to this, you will learn what your learning path should look like.',
   info3: 'Remember that only one answer is correct, there are no multiple choice questions.',
   start: 'Start the test',
-  wantRussian:'Do you want to check your Russian level?'
+  wantRussian:'Do you want to check your Russian level?',
+  next: 'Next'
 }
 
 export default en;
