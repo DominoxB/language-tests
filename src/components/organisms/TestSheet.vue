@@ -6,8 +6,8 @@
       </QuestionAndAnswers>
     </div>
     <div class="flex justify-between mx-96">
-      <BtnNext :name="$t('previous')" class="flex mb-6" @action="showPreviousQ"/>
-      <BtnNext :name="$t('next')" class="flex mb-6" @action="showNextQ" />
+      <BtnAction :name="$t('previous')" class="flex mb-6" @action="showPreviousQ"/>
+      <BtnAction :name="$t('next')" class="flex mb-6" @action="showNextQ" />
     </div>
   </div>
   <div v-else>
@@ -25,11 +25,11 @@ import { useQuestionEnglishStore } from '@/stores/testEnglish'
 import { useQuestionRussianStore } from '@/stores/testRussian'
 import { useRoute } from 'vue-router'
 import QuestionAndAnswers from '../atoms/QuestionAndAnswers.vue'
-import BtnNext from '../atoms/BtnNext.vue'
+import BtnAction from '../atoms/BtnAction.vue'
 
 export default defineComponent({
   name: 'TestSheet',
-  components: { QuestionAndAnswers, BtnNext },
+  components: { QuestionAndAnswers, BtnAction },
   setup() {
     const route = useRoute()
     const path = route.path
