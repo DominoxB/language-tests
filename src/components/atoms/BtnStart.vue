@@ -7,7 +7,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 export default defineComponent({
-  name: "BtnArrowDown",
+  name: "BtnStart",
   props: {
     name: {
       type: String,
