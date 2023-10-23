@@ -24,7 +24,8 @@ const pl = {
   start: 'Rozpocznij test',
   wantRussian: 'Chcesz sprawdzić poziom języka rosyjskiego?',
   next: 'Dalej',
-  previous: 'Wstecz'
+  previous: 'Wstecz',
+  checkResult: 'Sprawdź swój wynik'
 }
 
 export default pl;

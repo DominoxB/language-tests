@@ -24,7 +24,8 @@ const en = {
   start: 'Start the test',
   wantRussian:'Do you want to check your Russian level?',
   next: 'Next',
-  previous: 'Previous'
+  previous: 'Previous',
+  checkResult: 'Check your result'
 }
 
 export default en;
