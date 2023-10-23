@@ -1,59 +1,64 @@
 <template>
   <div v-if="path === '/EnglishPage'">
-    <QuestionAndAnswers 
-      v-show="question.id <= 10"
-      v-for="question in questionsEn" 
-      :key="question.id" 
-      :id="question.id" 
-      :question="question.q"
-      :answerA="question.a" 
-      :answerB="question.b" 
-      :answerC="question.c" 
-      :answerD="question.d" 
-      :correct="question.correct">
-    </QuestionAndAnswers>
-    <BtnStart :name="$t('next')"/>
+    <div id="myScroll" v-for="question in questionsEn.slice(start, end)" :key="question.id">
+      <QuestionAndAnswers :id="question.id" :question="question.q" :answerA="question.a" :answerB="question.b"
+        :answerC="question.c" :answerD="question.d" :correct="question.correct">
+      </QuestionAndAnswers>
+    </div>
+    <BtnNext :name="$t('next')" class="flex mx-auto mb-6" @next="showNextQ" />
   </div>
   <div v-else>
-    <QuestionAndAnswers 
-      v-for="question in questionsRu" 
-      :key="question.id" 
-      :id="question.id" 
-      :question="question.q"
-      :answerA="question.a" 
-      :answerB="question.b" 
-      :answerC="question.c" 
-      :answerD="question.d" 
-      :correct="question.correct" />
+    <div v-for="question in questionsRu" :key="question.id">
+      <QuestionAndAnswers v-for="question in questionsRu" :key="question.id" :id="question.id" :question="question.q"
+        :answerA="question.a" :answerB="question.b" :answerC="question.c" :answerD="question.d"
+        :correct="question.correct" />
+    </div>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent, ref } from 'vue'
 import { useQuestionEnglishStore } from '@/stores/testEnglish'
 import { useQuestionRussianStore } from '@/stores/testRussian'
 import { useRoute } from 'vue-router'
 import QuestionAndAnswers from '../atoms/QuestionAndAnswers.vue'
-import BtnStart from '../atoms/BtnStart.vue'
+import BtnNext from '../atoms/BtnNext.vue'
 
 export default defineComponent({
   name: 'TestSheet',
-  components: { QuestionAndAnswers, BtnStart },
+  components: { QuestionAndAnswers, BtnNext },
   setup() {
     const route = useRoute()
     const path = route.path
 
     const storeEn = useQuestionEnglishStore()
-    const storeRu = useQuestionRussianStore()
-
     const { questionsEn } = storeEn
+
+    const storeRu = useQuestionRussianStore()
     const { questionsRu } = storeRu
 
+    const start = ref(0)
+    const end = ref(10)
 
-    return { 
-      questionsEn, 
-      questionsRu, 
+    const scrollToBeggining = () => {
+      const myScroll = document.getElementById("myScroll")
+      myScroll?.scrollIntoView({ behavior: "smooth" })
+    }
+
+    const showNextQ = () => {
+      start.value += 10
+      end.value += 10
+      setTimeout(() => {
+        scrollToBeggining()
+      }, 100)
+    }
+    return {
+      questionsEn,
+      questionsRu,
       path,
+      showNextQ,
+      start,
+      end
     }
   }
 })

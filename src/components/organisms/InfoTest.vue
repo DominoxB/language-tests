@@ -9,7 +9,7 @@
       <BtnStart class="mt-4" @scroll="showTest" :name="$t('start')" />
     </div>
   </div>
-  <TestSheet id="myScroll" v-if="test" class="scroll-mt-24"/>
+  <TestSheet id="myScroll" v-if="test" class="scroll-mt-24" />
 </template>
 
 <script lang="ts">
@@ -37,8 +37,7 @@ export default defineComponent({
       test.value = true
       setTimeout(() => {
         scrollToTest()
-      }, 100);
-
+      }, 100)
     }
     return {
       test,
