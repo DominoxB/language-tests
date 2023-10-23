@@ -1,6 +1,7 @@
 <template>
   <div v-if="path === '/EnglishPage'">
     <QuestionAndAnswers 
+      v-show="question.id <= 10"
       v-for="question in questionsEn" 
       :key="question.id" 
       :id="question.id" 
@@ -11,6 +12,7 @@
       :answerD="question.d" 
       :correct="question.correct">
     </QuestionAndAnswers>
+    <BtnStart name="Dalej"/>
   </div>
   <div v-else>
     <QuestionAndAnswers 
@@ -32,10 +34,11 @@ import { useQuestionEnglishStore } from '@/stores/testEnglish'
 import { useQuestionRussianStore } from '@/stores/testRussian'
 import { useRoute } from 'vue-router'
 import QuestionAndAnswers from '../atoms/QuestionAndAnswers.vue'
+import BtnStart from '../atoms/BtnStart.vue'
 
 export default defineComponent({
   name: 'TestSheet',
-  components: { QuestionAndAnswers },
+  components: { QuestionAndAnswers, BtnStart },
   setup() {
     const route = useRoute()
     const path = route.path

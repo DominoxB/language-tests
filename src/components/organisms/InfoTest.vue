@@ -6,7 +6,7 @@
     <p>{{ $t('info2') }}</p>
     <p class="py-6">{{ $t('info3') }}</p>
     <div class="flex justify-end">
-      <BtnStart class="mt-4" @scroll="showTest" />
+      <BtnStart class="mt-4" @scroll="showTest" :name="$t('start')" />
     </div>
   </div>
   <TestSheet id="myScroll" v-if="test" class="scroll-mt-24"/>
