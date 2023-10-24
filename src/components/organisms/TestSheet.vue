@@ -16,7 +16,7 @@
       <QuestionAndAnswers :id="question.id" :question="question.q" :answerA="question.a" :answerB="question.b"
         :answerC="question.c" :answerD="question.d" :correct="question.correct" />
     </div>
-    <div class="flex justify-between mx-96">
+    <div class="flex justify-center mx-96 space-x-24">
       <BtnAction :name="$t('previous')" class="flex mb-6" @action="showPreviousQ" v-if="storeRu.currentPage > 1" />
       <BtnAction :name="$t('next')" class="flex mb-6" @action="showNextQ" v-if="storeRu.currentPage < 3" />
       <BtnAction :name="$t('checkResult')" class="flex mb-6" @action="showNextQ" v-if="storeRu.currentPage === 3" />
