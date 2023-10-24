@@ -2,6 +2,7 @@ import { defineStore } from "pinia";
 export const useQuestionEnglishStore = defineStore("EnglishQuestions", {
   // API simulation (mocked data)
   state: () => ({
+    currentPage: 1,
     questionsEn: [
       {
         id: 1,
@@ -276,5 +277,12 @@ export const useQuestionEnglishStore = defineStore("EnglishQuestions", {
 
     ],
   }),
-  actions: {},
+  actions: {
+    increment() {
+      this.currentPage++
+    },
+    decrement() {
+      this.currentPage--
+    }
+  }
 });
