@@ -6,19 +6,20 @@
       </QuestionAndAnswers>
     </div>
     <div class="flex justify-between mx-96">
-      <BtnAction :name="$t('previous')" class="flex mb-6" @action="showPreviousQ"/>
-      <BtnAction :name="$t('next')" class="flex mb-6" @action="showNextQ" />
+      <BtnAction :name="$t('previous')" class="flex mb-6" @action="showPreviousQ" v-if="storeRu.currentPage > 1" />
+      <BtnAction :name="$t('next')" class="flex mb-6" @action="showNextQ" v-if="storeRu.currentPage < 3" />
+      <BtnAction :name="$t('checkResult')" class="flex mb-6" @action="showNextQ" v-if="storeRu.currentPage === 3" />
     </div>
   </div>
   <div v-else>
     <div id="myScroll" v-for="question in questionsRu.slice(start, end)" :key="question.id">
-      <QuestionAndAnswers :id="question.id" :question="question.q"
-        :answerA="question.a" :answerB="question.b" :answerC="question.c" :answerD="question.d"
-        :correct="question.correct" />
+      <QuestionAndAnswers :id="question.id" :question="question.q" :answerA="question.a" :answerB="question.b"
+        :answerC="question.c" :answerD="question.d" :correct="question.correct" />
     </div>
     <div class="flex justify-between mx-96">
-      <BtnAction :name="$t('previous')" class="flex mb-6" @action="showPreviousQ"/>
-      <BtnAction :name="$t('next')" class="flex mb-6" @action="showNextQ" />
+      <BtnAction :name="$t('previous')" class="flex mb-6" @action="showPreviousQ" v-if="storeRu.currentPage > 1" />
+      <BtnAction :name="$t('next')" class="flex mb-6" @action="showNextQ" v-if="storeRu.currentPage < 3" />
+      <BtnAction :name="$t('checkResult')" class="flex mb-6" @action="showNextQ" v-if="storeRu.currentPage === 3" />
     </div>
   </div>
 </template>
@@ -42,11 +43,10 @@ export default defineComponent({
     const { questionsEn } = storeEn
 
     const storeRu = useQuestionRussianStore()
-    const { questionsRu } = storeRu
+    const { questionsRu, currentPage } = storeRu
 
     const start = ref(0)
     const end = ref(10)
-
 
     const scrollToBeginning = () => {
       const myScroll = document.getElementById("myScroll")
@@ -54,14 +54,17 @@ export default defineComponent({
     }
 
     const showNextQ = () => {
+      storeEn.increment()
+      storeRu.increment()
       start.value += 10
       end.value += 10
       setTimeout(() => {
         scrollToBeginning()
       }, 100)
     }
-
     const showPreviousQ = () => {
+      storeEn.increment()
+      storeRu.decrement()
       start.value -= 10
       end.value -= 10
       setTimeout(() => {
@@ -72,11 +75,13 @@ export default defineComponent({
     return {
       questionsEn,
       questionsRu,
+      currentPage,
       path,
       start,
       end,
       showNextQ,
       showPreviousQ,
+      storeRu
     }
   }
 })
