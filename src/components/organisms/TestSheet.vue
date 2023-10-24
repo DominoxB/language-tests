@@ -5,10 +5,10 @@
         :answerC="question.c" :answerD="question.d" :correct="question.correct">
       </QuestionAndAnswers>
     </div>
-    <div class="flex justify-between mx-96">
-      <BtnAction :name="$t('previous')" class="flex mb-6" @action="showPreviousQ" v-if="storeRu.currentPage > 1" />
-      <BtnAction :name="$t('next')" class="flex mb-6" @action="showNextQ" v-if="storeRu.currentPage < 3" />
-      <BtnAction :name="$t('checkResult')" class="flex mb-6" @action="showNextQ" v-if="storeRu.currentPage === 3" />
+    <div class="flex justify-center mx-96 space-x-24">
+      <BtnAction :name="$t('previous')" class="flex mb-6" @action="showPreviousQ" v-if="storeEn.currentPage > 1" />
+      <BtnAction :name="$t('next')" class="flex mb-6" @action="showNextQ" v-if="storeEn.currentPage < 3" />
+      <BtnAction :name="$t('checkResult')" class="flex mb-6" @action="showNextQ" v-if="storeEn.currentPage === 3" />
     </div>
   </div>
   <div v-else>
@@ -81,7 +81,8 @@ export default defineComponent({
       end,
       showNextQ,
       showPreviousQ,
-      storeRu
+      storeRu,
+      storeEn
     }
   }
 })
