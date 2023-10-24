@@ -62,7 +62,7 @@ export default defineComponent({
         scrollToBeginning()
       }, 100)
     }
-    
+
     const showPreviousQ = () => {
       storeEn.increment()
       storeRu.decrement()
@@ -88,4 +88,3 @@ export default defineComponent({
   }
 })
 </script>
-
