@@ -6,7 +6,6 @@
     <div class="flex items-center justify-center space-x-16 text-lg border-2 border-blue-300 rounded-2xl py-4 px-4 my-4">
       <div>
         <input type="radio" 
-          :id="answerA" 
           value="a" 
           :name="question" 
           v-model="selected" />
@@ -15,7 +14,6 @@
       </div>
       <div>
         <input type="radio" 
-          :id="answerB" 
           value="b" 
           :name="question" 
           v-model="selected" />
@@ -24,7 +22,6 @@
       </div>
       <div>
         <input type="radio" 
-          :id="answerC" 
           value="c" 
           :name="question" 
           v-model="selected" />
@@ -33,7 +30,6 @@
       </div>
       <div>
          <input type="radio" 
-          :id="answerD" 
           value="d" 
           :name="question" 
           v-model="selected" />
