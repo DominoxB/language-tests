@@ -1,27 +1,33 @@
 <template>
-  <div class="flex space-x-20 items-center font-open border-2 border-blue-400 py-10 my-20 mx-72 px-16">
-    <div>
-      <p class="text-2xl">Twój wynik:</p>
-      <p class="py-6 text-xl text-blue-500 font-bold uppercase">poziom B2 - poziom wyższy średnio zaawansowany</p>
-      <p>Osoba posługująca się językiem na tym poziomie rozumie znaczenie głównych wątków przekazu zawartego w złożonych
-        tekstach na tematy konkretne i abstrakcyjne, łącznie z rozumieniem dyskusji na tematy techniczne z zakresu jej
-        specjalności. Potrafi porozumiewać się na tyle płynnie i spontanicznie, by prowadzić normalną rozmowę z rodzimym
-        użytkownikiem danego języka, nie powodując przy tym napięcia u którejkolwiek ze stron. Potrafi formułować
-        przejrzyste wypowiedzi ustne i pisemne w szerokim zakresie tematów, a także wyjaśniać swoje stanowisko w sprawach
-        będących przedmiotem dyskusji, rozważając wady i zalety różnych rozwiązań.</p>
+  <div class="font-open border-2 border-blue-400 py-10 my-20 mx-72 px-16">
+    <div class="flex space-x-20 items-center">
+      <div>
+        <p class="text-2xl">Twój wynik:</p>
+        <p class="py-6 text-xl text-blue-500 font-bold uppercase">poziom B2 - poziom wyższy średnio zaawansowany</p>
+        <p>Osoba posługująca się językiem na tym poziomie rozumie znaczenie głównych wątków przekazu zawartego w złożonych
+          tekstach na tematy konkretne i abstrakcyjne, łącznie z rozumieniem dyskusji na tematy techniczne z zakresu jej
+          specjalności. Potrafi porozumiewać się na tyle płynnie i spontanicznie, by prowadzić normalną rozmowę z rodzimym
+          użytkownikiem danego języka, nie powodując przy tym napięcia u którejkolwiek ze stron. Potrafi formułować
+          przejrzyste wypowiedzi ustne i pisemne w szerokim zakresie tematów, a także wyjaśniać swoje stanowisko w
+          sprawach
+          będących przedmiotem dyskusji, rozważając wady i zalety różnych rozwiązań.</p>
+      </div>
+      <LevelSign text="B2" />
     </div>
-    <LevelSign text="B2"/>
+    <BtnAction class="mt-12" name="Sprawdź odpowiedzi" />
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
 import LevelSign from '@/components/atoms/LevelSign.vue'
+import BtnAction from '@/components/atoms/BtnAction.vue'
 
 export default defineComponent({
   name: 'ResultPage',
   components: {
-    LevelSign
+    LevelSign,
+    BtnAction
   },
   setup() {
     const levels = [
