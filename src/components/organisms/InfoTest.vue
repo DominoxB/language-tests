@@ -1,5 +1,5 @@
 <template>
-  <div class="font-open border-2 border-blue-200 p-10 my-20 mx-64">
+  <div class="font-open border-2 border-blue-200 p-10 my-20 mx-64" id="myScroll">
     <div class="text-3xl" v-if="path === '/EnglishPage'">{{ $t('wantEnglish') }}</div>
     <div class="text-3xl" v-else>{{ $t('wantRussian') }}</div>
     <p class="py-6">{{ $t('info1') }}</p>
