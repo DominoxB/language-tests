@@ -7,7 +7,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 export default defineComponent({
-  name: "BtnArrowDown",
+  name: "BtnScrollToTop",
   emits: ['scroll']
 })
 </script>
