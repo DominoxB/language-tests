@@ -1,9 +1,19 @@
 <template>
+  <div class="text-center bg-test py-36 font-open text-white ">
+    <p class="text-3xl font-bold mb-4">Sprawdź, jak Ci poszło!</p>
+    <div class="space-y-1 text-lg">
+      <p>Poniżej znajduje się Twój wynik: ilość punktów, wartość procentowa oraz przypisanie do poziomu wraz z jego
+        opisem.</p>
+      <p>Mamy nadzieję, że jesteś zadowolony :)</p>
+      <p>Jeśli nie to pamiętaj, że człowiek uczy się całe życie i nigdy nie jest za późno na naukę języka. Jesteś w
+        idealnym momencie, aby się tym zająć :)</p>
+    </div>
+  </div>
   <div class="font-open border-2 border-blue-400 py-10 my-20 mx-72 px-16">
     <div class="flex space-x-20 items-center">
       <div>
-        <p class="text-2xl">Twój wynik:</p>
-        <p class="py-6 text-xl text-blue-500 font-bold uppercase">poziom B2 - poziom wyższy średnio zaawansowany</p>
+        <p class="text-2xl font-bold">Twój wynik: 25/30 (83%)</p>
+        <p class="py-6 text-xl text-blue//-500 font-bold uppercase">poziom B2 - poziom wyższy średnio zaawansowany</p>
         <p>Osoba posługująca się językiem na tym poziomie rozumie znaczenie głównych wątków przekazu zawartego w złożonych
           tekstach na tematy konkretne i abstrakcyjne, łącznie z rozumieniem dyskusji na tematy techniczne z zakresu jej
           specjalności. Potrafi porozumiewać się na tyle płynnie i spontanicznie, by prowadzić normalną rozmowę z rodzimym
