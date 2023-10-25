@@ -3,7 +3,7 @@
   <div class="font-open border-2 border-blue-400 py-10 my-20 mx-72 px-16">
     <div class="flex space-x-20 items-center">
       <div>
-        <p class="text-2xl font-bold">Twój wynik: 25/30 (83%)</p>
+        <p class="text-2xl font-bold">{{ $t('resultTest') }} 25/30 (83%)</p>
         <p class="py-6 text-xl text-blue//-500 font-bold uppercase">poziom B2 - poziom wyższy średnio zaawansowany</p>
         <p>Osoba posługująca się językiem na tym poziomie rozumie znaczenie głównych wątków przekazu zawartego w złożonych
           tekstach na tematy konkretne i abstrakcyjne, łącznie z rozumieniem dyskusji na tematy techniczne z zakresu jej
@@ -15,7 +15,7 @@
       </div>
       <LevelSign text="B2" />
     </div>
-    <BtnAction class="mt-12" name="Sprawdź odpowiedzi" />
+    <BtnAction class="mt-12" :name="$t('checkAnswers')" />
   </div>
 </template>
 
