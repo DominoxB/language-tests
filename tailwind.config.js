@@ -5,7 +5,8 @@ module.exports = {
     extend: {
       fontFamily: {
         open: ['"Open Sans"'],
-        courgette: ['"Courgette"']
+        courgette: ['"Courgette"'],
+        slab: ['"Roboto Slab"']
       },
       backgroundImage: {
         test: "url('@/img/answer-sheet1.jpg')",

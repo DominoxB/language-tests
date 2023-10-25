@@ -25,7 +25,13 @@ const pl = {
   wantRussian: 'Chcesz sprawdzić poziom języka rosyjskiego?',
   next: 'Dalej',
   previous: 'Wstecz',
-  checkResult: 'Sprawdź swój wynik'
+  checkResult: 'Sprawdź swój wynik',
+  introResult: 'Sprawdź, jak Ci poszło!',
+  introResult1: 'Poniżej znajduje się Twój wynik: ilość punktów, wartość procentowa oraz przypisanie do poziomu wraz z jego opisem.',
+  introResult2: 'Mamy nadzieję, że jesteś zadowolony :)',
+  introResult3: 'Jeśli nie to pamiętaj, że człowiek uczy się całe życie i nigdy nie jest za późno na naukę języka. Jesteś w idealnym momencie, aby się tym zająć :)',
+  resultTest: 'Twój wynik:',
+  checkAnswers: 'Sprawdź odpowiedzi'
 }
 
 export default pl;

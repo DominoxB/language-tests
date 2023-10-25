@@ -25,7 +25,14 @@ const en = {
   wantRussian:'Do you want to check your Russian level?',
   next: 'Next',
   previous: 'Previous',
-  checkResult: 'Check your result'
+  checkResult: 'Check your result',
+  introResult: 'Check how you did!',
+  introResult1: 'Below you will find your result: number of points, percentage and assignment to the level along with its description.',
+  introResult2: 'We hope you are satisfied :)',
+  introResult3: 'If not, remember that people learn throughout their lives and it is never too late to learn a language. You are in perfect time to do it :)',
+  resultTest: 'Your result:',
+  checkAnswers: 'Check answers'
+
 }
 
 export default en;

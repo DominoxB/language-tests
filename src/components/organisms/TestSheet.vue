@@ -19,7 +19,9 @@
     <div class="flex justify-center mx-96 space-x-24">
       <BtnAction :name="$t('previous')" class="flex mb-6" @action="showPreviousQ" v-if="storeRu.currentPage > 1" />
       <BtnAction :name="$t('next')" class="flex mb-6" @action="showNextQ" v-if="storeRu.currentPage < 3" />
-      <BtnAction :name="$t('checkResult')" class="flex mb-6" @action="showNextQ" v-if="storeRu.currentPage === 3" />
+      <router-link to="/ResultPage">
+        <BtnAction :name="$t('checkResult')" class="flex mb-6" v-if="storeRu.currentPage === 3" />
+      </router-link>
     </div>
   </div>
 </template>
@@ -62,7 +64,7 @@ export default defineComponent({
         scrollToBeginning()
       }, 100)
     }
-    
+
     const showPreviousQ = () => {
       storeEn.increment()
       storeRu.decrement()
@@ -88,4 +90,3 @@ export default defineComponent({
   }
 })
 </script>
-

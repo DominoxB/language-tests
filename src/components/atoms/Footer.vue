@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-slate-800 text-white space-x-4 py-4 flex items-center justify-center" id="secondScroll">
+  <div class="bg-slate-800 text-white space-x-4 py-4 flex items-center justify-center w-full" id="secondScroll">
     <a href="https://pl-pl.facebook.com" target="_blank">
       <img src="@/icons/facebook.png" />
     </a>
