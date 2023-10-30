@@ -5,34 +5,22 @@
     </div>
     <div class="flex items-center justify-center space-x-16 text-lg border-2 border-blue-300 rounded-2xl py-4 px-4 my-4">
       <div>
-        <input type="radio" 
-          value="a" 
-          :name="question" 
-          v-model="selected" />
+        <input type="radio" value="a" :name="question" v-model="selected" @change="setValue" />
         {{ answerA }}
         <label for="answerA" />
       </div>
       <div>
-        <input type="radio" 
-          value="b" 
-          :name="question" 
-          v-model="selected" />
+        <input type="radio" value="b" :name="question" v-model="selected" @change="setValue" />
         {{ answerB }}
         <label for="answerB" />
       </div>
       <div>
-        <input type="radio" 
-          value="c" 
-          :name="question" 
-          v-model="selected" />
+        <input type="radio" value="c" :name="question" v-model="selected" @change="setValue" />
         {{ answerC }}
         <label for="answerC" />
       </div>
       <div>
-         <input type="radio" 
-          value="d" 
-          :name="question" 
-          v-model="selected" />
+        <input type="radio" value="d" :name="question" v-model="selected" @change="setValue" />
         {{ answerD }}
         <label for="answerD" />
       </div>
@@ -43,6 +31,7 @@
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue'
+import { useUserAnswersStore } from '@/stores/userAnswers'
 export default defineComponent({
   name: 'QuestionAndAnswers',
   props: {
@@ -74,11 +63,22 @@ export default defineComponent({
       type: String
     }
   },
-  setup() {
-    const selected = ref('')
-    return {
-      selected
+  setup(props) {
+    const storeAnswers = useUserAnswersStore()
+    const { answers } = storeAnswers
+
+    const selected = ref(answers[props.id])
+
+    const setValue = (ev: Event) => {
+      const userAnswer = ((ev.target as HTMLInputElement).value)
+      const obj = Object.assign(answers, { [props.id]: userAnswer })
+      console.log(obj)
     }
+    return {
+      selected,
+      setValue
+    }
+
   }
 })
 </script>
