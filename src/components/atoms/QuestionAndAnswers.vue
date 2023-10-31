@@ -1,6 +1,5 @@
 <template>
   <div class="font-open px-96 py-4">
-    <button @click="getAnswers">Test</button>
     <div class="text-2xl">
       {{ `${id + '. '} ` }} {{ question }}
     </div>
