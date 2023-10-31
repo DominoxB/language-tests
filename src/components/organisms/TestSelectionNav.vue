@@ -1,7 +1,7 @@
 <template>
   <div class="relative" ref="dropdown">
     <div class="flex items-center cursor-pointer" @click="isOpen = !isOpen">
-      <span>{{ $t('test') }}</span>
+      <span class="mr-1">{{ $t('test') }}</span>
       <img src="@/icons/single-down-arrow.png" alt="arrow" class="w-4 h-4 ml-1 mt-px" />
     </div>
     <div v-if="isOpen">
