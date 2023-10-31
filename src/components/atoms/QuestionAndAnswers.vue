@@ -1,5 +1,6 @@
 <template>
   <div class="font-open px-96 py-4">
+    <button @click="getAnswers">Test</button>
     <div class="text-2xl">
       {{ `${id + '. '} ` }} {{ question }}
     </div>
@@ -65,18 +66,30 @@ export default defineComponent({
   },
   setup(props) {
     const storeAnswers = useUserAnswersStore()
-    const { answers } = storeAnswers
+    const { answers, correctAnswers } = storeAnswers
+
+    const obj = ref({} as string)
+    const goodAnswers = ref({} as string)
 
     const selected = ref(answers[props.id])
 
     const setValue = (ev: Event) => {
       const userAnswer = ((ev.target as HTMLInputElement).value)
-      const obj = Object.assign(answers, { [props.id]: userAnswer })
-      console.log(obj)
+      obj.value = Object.assign(answers, { [props.id]: userAnswer })
+      // console.log(obj)
     }
+
+    goodAnswers.value = Object.assign(correctAnswers, {[props.id]: props.correct}) // wyswietlic obiekt ze wszystkimi poprawnymi odpowiedziami
+
+    const getAnswers = () => {
+      console.log('user answers: ', obj)
+      console.log('correct answers: ', goodAnswers)
+    }
+
     return {
       selected,
-      setValue
+      setValue,
+      getAnswers
     }
 
   }
