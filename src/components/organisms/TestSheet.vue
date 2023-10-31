@@ -66,7 +66,7 @@ export default defineComponent({
     }
 
     const showPreviousQ = () => {
-      storeEn.increment()
+      storeEn.decrement()
       storeRu.decrement()
       start.value -= 10
       end.value -= 10
