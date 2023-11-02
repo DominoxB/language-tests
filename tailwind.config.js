@@ -11,7 +11,8 @@ module.exports = {
       backgroundImage: {
         test: "url('@/img/answer-sheet1.jpg')",
         english: "url('@/img/english.jpg')",
-        russian: "url('@/img/matr.jpg')"
+        russian: "url('@/img/matr.jpg')",
+        tutors: "url('@/img/faces.jpg')"
       },
     },
   },
