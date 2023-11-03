@@ -31,7 +31,18 @@ const en = {
   introResult2: 'We hope you are satisfied :)',
   introResult3: 'If not, remember that people learn throughout their lives and it is never too late to learn a language. You are in perfect time to do it :)',
   resultTest: 'Your result:',
-  checkAnswers: 'Check answers'
+  checkAnswers: 'Check answers',
+  us: 'About us',
+  tutors: 'We are a group of friends passionate about learning a foreign language. Each of us has pedagogical education and philological, so we can say that we are specialists in this topic :) Our group includes graduates of Oxford, as well as outstanding Polish universities, such as the Nicolaus Copernicus University in Toruń, the University of Gdańsk, and the Jagiellonian University in Krakow. Years of experience as teachers/tutors, they gave us a lot of inspiration and allowed us to observe what problems arise while learning, but above all, how to deal with them. Thanks to this, we will find a solution even for those of you for whom learning a foreign language has always been a nuisance.',
+  ourTests: "The tests we prepare are a test of the student's basic skills. A wide range of topics and grammar gives us an excellent picture of the direction in which further learning should take place. If you want to make a connection cooperation or check what we have to offer, contact us after taking the test. We will be able to analyze your answers together and check when you need support. The first meeting, including discussion of the placement test, is free :). Languages ​​with us they will no longer be strange!",
+  findUs: 'Find us online',
+  available: 'We are available for you at',
+  fb: 'Facebook',
+  insta: 'Instagram',
+  tik: 'TikTok',
+  and: 'and',
+  twitter: 'X',
+  write: 'Write a message and someone from our team will contact you within 24 hours. We will then be able to arrange an online meeting where we will discuss your test, tell us about your linguistic needs, and we will present you with a plan for your further adventure with a foreign language. Remember - the first meeting is free.'
 
 }
 
