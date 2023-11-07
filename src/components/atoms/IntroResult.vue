@@ -4,7 +4,6 @@
   <div class="space-y-1 text-lg">
     <p>{{ $t('introResult1') }}</p>
     <p>{{ $t('introResult2') }}</p>
-    <p>{{ $t('introResult3') }}</p>
   </div>
 </div>
 </template>
