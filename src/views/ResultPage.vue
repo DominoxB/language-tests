@@ -1,5 +1,5 @@
 <template>
-  <IntroResult class="px-40" />
+  <IntroResult class="px-96" />
   <div class="font-open border-2 border-blue-400 py-10 my-20 mx-72 px-16">
     <div class="flex space-x-20 items-center">
       <div>
