@@ -4,28 +4,26 @@
       {{ `${id + '. '} ` }} {{ question }}
     </div>
     <div class="flex items-center justify-center space-x-16 text-lg border-2 border-blue-300 rounded-2xl py-4 px-4 my-4">
-      <div>
+      <div class="space-x-1">
         <input type="radio" value="a" :name="question" v-model="selected" @change="setValue" />
-        {{ answerA }}
-        <label for="answerA" />
+        <label for="answerA">{{ answerA }}</label>
       </div>
-      <div>
+      <div class="space-x-1">
         <input type="radio" value="b" :name="question" v-model="selected" @change="setValue" />
-        {{ answerB }}
-        <label for="answerB" />
+        <label for="answerB">{{ answerB }}</label>
       </div>
-      <div>
+      <div class="space-x-1">
         <input type="radio" value="c" :name="question" v-model="selected" @change="setValue" />
-        {{ answerC }}
-        <label for="answerC" />
+        <label for="answerC">{{ answerC }}</label>
       </div>
-      <div>
+      <div class="space-x-1">
         <input type="radio" value="d" :name="question" v-model="selected" @change="setValue" />
-        {{ answerD }}
-        <label for="answerD" />
+        <label for="answerD">{{ answerD }}</label>
       </div>
     </div>
     <div class="bg-pink-400 h-10 w-full" v-if="correct === selected"></div>
+    <button @click="compare" class="mr-8">wynik</button>
+    <button @click="getAnswers">odpowiedzi</button>
   </div>
 </template>
 
@@ -75,20 +73,30 @@ export default defineComponent({
     const setValue = (ev: Event) => {
       const userAnswer = ((ev.target as HTMLInputElement).value)
       obj.value = Object.assign(answers, { [props.id]: userAnswer })
-      // console.log(obj)
     }
 
-    goodAnswers.value = Object.assign(correctAnswers, {[props.id]: props.correct}) // wyswietlic obiekt ze wszystkimi poprawnymi odpowiedziami
+    goodAnswers.value = Object.assign(correctAnswers, { [props.id]: props.correct }) // wyswietlic obiekt ze wszystkimi poprawnymi odpowiedziami
 
     const getAnswers = () => {
-      console.log('user answers: ', obj)
-      console.log('correct answers: ', goodAnswers)
+      console.log('user answers: ', obj.value)
+      console.log('correct answers: ', goodAnswers.value)
+    }
+
+    const compare = () => {
+      let counter = 0
+      for (let i = 1; i < 30; i++) { // wykonuje sie przy kazdym pytaniu
+        if (obj.value[i] === goodAnswers.value[i]) { // jesli user answer i correct answer takie same - zwiekszamy counter o 1
+          counter++
+        }
+      }
+      console.log('wynik:', counter)
     }
 
     return {
       selected,
       setValue,
-      getAnswers
+      getAnswers,
+      compare,
     }
 
   }
