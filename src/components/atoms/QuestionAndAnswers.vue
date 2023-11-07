@@ -83,7 +83,7 @@ export default defineComponent({
     }
 
     const compare = () => {
-      let counter = 0
+      let counter = 1
       for (let i = 1; i < 30; i++) { // wykonuje sie przy kazdym pytaniu
         if (obj.value[i] === goodAnswers.value[i]) { // jesli user answer i correct answer takie same - zwiekszamy counter o 1
           counter++
