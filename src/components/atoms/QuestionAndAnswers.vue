@@ -24,6 +24,7 @@
     <div class="bg-pink-400 h-10 w-full" v-if="correct === selected"></div>
     <button @click="compare" class="mr-8">wynik</button>
     <button @click="getAnswers">odpowiedzi</button>
+    counter: {{ storeAnswers.counter }}
   </div>
 </template>
 
@@ -63,19 +64,18 @@ export default defineComponent({
   },
   setup(props) {
     const storeAnswers = useUserAnswersStore()
-    const { answers, correctAnswers, counter } = storeAnswers
 
     const obj = ref({} as string)
     const goodAnswers = ref({} as string)
 
-    const selected = ref(answers[props.id])
+    const selected = ref(storeAnswers.answers[props.id])
 
     const setValue = (ev: Event) => {
       const userAnswer = ((ev.target as HTMLInputElement).value)
-      obj.value = Object.assign(answers, { [props.id]: userAnswer })
+      obj.value = Object.assign(storeAnswers.answers, { [props.id]: userAnswer })
     }
 
-    goodAnswers.value = Object.assign(correctAnswers, { [props.id]: props.correct }) // wyswietlic obiekt ze wszystkimi poprawnymi odpowiedziami
+    goodAnswers.value = Object.assign(storeAnswers.correctAnswers, { [props.id]: props.correct }) // wyswietlic obiekt ze wszystkimi poprawnymi odpowiedziami
 
     const getAnswers = () => {
       console.log('user answers: ', obj.value)
@@ -83,12 +83,13 @@ export default defineComponent({
     }
 
     const compare = () => {
-      for (let i = 1; i <= 30; i++) { // wykonuje sie przy kazdym pytaniu
+      for (let i = 1; i <= Object.keys(goodAnswers.value).length; i++) {
+        console.log(obj.value[i], goodAnswers.value[i]) // wykonuje sie przy kazdym pytaniu
         if (obj.value[i] === goodAnswers.value[i]) { // jesli user answer i correct answer takie same - zwiekszamy counter o 1
           storeAnswers.addPoint()
         }
       }
-      console.log('wynik:', counter)
+      console.log('wynik:', storeAnswers.counter)
     }
 
     return {
@@ -96,6 +97,7 @@ export default defineComponent({
       setValue,
       getAnswers,
       compare,
+      storeAnswers
     }
 
   }

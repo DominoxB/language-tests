@@ -83,7 +83,7 @@ export default defineComponent({
         scrollToBeginning()
       }, 100)
     }
-
+    
     return {
       store,
       questions,
