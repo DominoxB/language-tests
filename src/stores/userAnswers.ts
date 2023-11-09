@@ -4,6 +4,13 @@ import { defineStore } from "pinia";
 export const useUserAnswersStore = defineStore("UserAnswers", {
   state: () => ({
     answers: {} as string,
-    correctAnswers: {} as string
+    correctAnswers: {} as string,
+    counter: 0
   }),
+  actions: {
+    addPoint() {
+      this.counter++
+      console.log(this.counter, 'counter')
+    },
+  }
 })

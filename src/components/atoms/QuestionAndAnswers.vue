@@ -63,7 +63,7 @@ export default defineComponent({
   },
   setup(props) {
     const storeAnswers = useUserAnswersStore()
-    const { answers, correctAnswers } = storeAnswers
+    const { answers, correctAnswers, counter } = storeAnswers
 
     const obj = ref({} as string)
     const goodAnswers = ref({} as string)
@@ -83,10 +83,9 @@ export default defineComponent({
     }
 
     const compare = () => {
-      let counter = 1
-      for (let i = 1; i < 30; i++) { // wykonuje sie przy kazdym pytaniu
+      for (let i = 1; i <= 30; i++) { // wykonuje sie przy kazdym pytaniu
         if (obj.value[i] === goodAnswers.value[i]) { // jesli user answer i correct answer takie same - zwiekszamy counter o 1
-          counter++
+          storeAnswers.addPoint()
         }
       }
       console.log('wynik:', counter)
