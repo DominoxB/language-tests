@@ -21,7 +21,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent, onMounted } from 'vue'
 import { useUserAnswersStore } from '@/stores/userAnswers'
 import { useLevelsStore } from '@/stores/levelsStore'
 import LevelSign from '@/components/atoms/LevelSign.vue'
@@ -41,6 +41,26 @@ export default defineComponent({
 
     const storeLevels = useLevelsStore()
     const { levels } = storeLevels
+
+    const setLevel = () => {
+      if(counter < 10) {
+        console.log('A1')
+      } else if (counter > 9 && counter < 15) {
+        console.log('A2')
+      } else if (counter > 14 && counter < 20) {
+        console.log('B1')
+      } else if (counter > 19 && counter < 26) {
+        console.log('B2')
+      } else if (counter > 25 && counter < 29) {
+        console.log('C1')
+      } else {
+        console.log('C2')
+      }
+    }
+
+    onMounted(() => {
+      setLevel()
+    })
     return {
       counter
     }
