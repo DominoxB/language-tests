@@ -38,8 +38,8 @@ export default defineComponent({
     const { questionsRu } = storeRu
     
     const storeAnswers = useUserAnswersStore()
-    const { correctAnswers, answers } = storeAnswers
-    
+    const { correctAnswers, userAnswers } = storeAnswers
+
     const start = ref(0)
     const end = ref(10)
 
@@ -49,13 +49,13 @@ export default defineComponent({
 
     const compare = () => {
       for (let i = 1; i <= Object.keys(correctAnswers).length; i++) {
-        if (answers[i] === correctAnswers[i]) { // jesli user answer i correct answer takie same - zwiekszamy counter o 1
+        if (userAnswers[i] === correctAnswers[i]) { // jesli user answer i correct answer takie same - zwiekszamy counter o 1
           storeAnswers.addPoint()
         }
       }
       console.log('wynik:', storeAnswers.counter)
       console.log(correctAnswers)
-      console.log(answers)
+      console.log(userAnswers)
 
     }
 
