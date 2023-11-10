@@ -54,9 +54,6 @@ export default defineComponent({
       type: String,
       required: true
     },
-    correct: {
-      type: String
-    }
   },
   setup(props) {
     const storeAnswers = useUserAnswersStore()
