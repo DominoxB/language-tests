@@ -21,10 +21,6 @@
         <label for="answerD">{{ answerD }}</label>
       </div>
     </div>
-    <div class="bg-pink-400 h-10 w-full" v-if="correct === selected"></div>
-    <button @click="compare" class="mr-8">wynik</button>
-    <button @click="getAnswers">odpowiedzi</button>
-    counter: {{ storeAnswers.counter }}
   </div>
 </template>
 
@@ -66,7 +62,6 @@ export default defineComponent({
     const storeAnswers = useUserAnswersStore()
 
     const obj = ref({} as string)
-    const goodAnswers = ref({} as string)
 
     const selected = ref(storeAnswers.answers[props.id])
 
@@ -74,32 +69,11 @@ export default defineComponent({
       const userAnswer = ((ev.target as HTMLInputElement).value)
       obj.value = Object.assign(storeAnswers.answers, { [props.id]: userAnswer })
     }
-
-    goodAnswers.value = Object.assign(storeAnswers.correctAnswers, { [props.id]: props.correct }) // wyswietlic obiekt ze wszystkimi poprawnymi odpowiedziami
-
-    const getAnswers = () => {
-      console.log('user answers: ', obj.value)
-      console.log('correct answers: ', goodAnswers.value)
-    }
-
-    const compare = () => {
-      for (let i = 1; i <= Object.keys(goodAnswers.value).length; i++) {
-        console.log(obj.value[i], goodAnswers.value[i]) // wykonuje sie przy kazdym pytaniu
-        if (obj.value[i] === goodAnswers.value[i]) { // jesli user answer i correct answer takie same - zwiekszamy counter o 1
-          storeAnswers.addPoint()
-        }
-      }
-      console.log('wynik:', storeAnswers.counter)
-    }
-
     return {
       selected,
       setValue,
-      getAnswers,
-      compare,
       storeAnswers
     }
-
   }
 })
 </script>
