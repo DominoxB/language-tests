@@ -4,7 +4,7 @@ import { defineStore } from "pinia";
 export const useUserAnswersStore = defineStore("UserAnswers", {
   state: () => {
     return {
-      answers: {} as string,
+      userAnswers: {} as string,
       correctAnswers: {
         1: 'a',
         2: 'c',
