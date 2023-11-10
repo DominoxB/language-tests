@@ -34,9 +34,9 @@ export const useUserAnswersStore = defineStore("UserAnswers", {
         26: 'c',
         27: 'b',
         28: 'c',
-        29: 'c', 
+        29: 'c',
         30: 'b'
-      },
+      } as unknown as string,
       counter: 0
     }
   },
