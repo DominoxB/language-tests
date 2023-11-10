@@ -9,7 +9,7 @@
       <BtnAction :name="$t('previous')" class="flex mb-6" @action="showPreviousQ" v-if="store.currentPage > 1" />
       <BtnAction :name="$t('next')" class="flex mb-6" @action="showNextQ" v-if="store.currentPage < 3" />
       <router-link to="/ResultPage">
-        <BtnAction :name="$t('checkResult')" class="flex mb-6" v-if="store.currentPage === 3" />
+        <BtnAction :name="$t('checkResult')" @click=compare class="flex mb-6" v-if="store.currentPage === 3" />
       </router-link>
     </div>
   </div>
@@ -37,13 +37,27 @@ export default defineComponent({
     const { questionsRu } = storeRu
     
     const storeAnswers = useUserAnswersStore()
-
+    const goodAnswers = storeAnswers.correctAnswers
+    const userAnswers = storeAnswers.answers
     const start = ref(0)
     const end = ref(10)
 
     const store = ref()
     const questions = ref()
     const currentPage = ref(1)
+
+    const compare = () => {
+      for (let i = 1; i <= Object.keys(goodAnswers).length; i++) {
+        if (userAnswers[i] === goodAnswers[i]) { // jesli user answer i correct answer takie same - zwiekszamy counter o 1
+          storeAnswers.addPoint()
+        }
+      }
+      console.log('wynik:', storeAnswers.counter)
+      console.log(goodAnswers)
+      console.log(userAnswers)
+
+    }
+
 
     const setStore = () => {
       if (path === '/EnglishPage') {
@@ -93,6 +107,7 @@ export default defineComponent({
       end,
       showNextQ,
       showPreviousQ,
+      compare
     }
   }
 })
