@@ -30,6 +30,7 @@ export default defineComponent({
   setup() {
     const route = useRoute()
     const path = route.path
+
     const storeEn = useQuestionEnglishStore()
     const { questionsEn } = storeEn
 
@@ -37,8 +38,8 @@ export default defineComponent({
     const { questionsRu } = storeRu
     
     const storeAnswers = useUserAnswersStore()
-    const goodAnswers = storeAnswers.correctAnswers
-    const userAnswers = storeAnswers.answers
+    const { correctAnswers, answers } = storeAnswers
+    
     const start = ref(0)
     const end = ref(10)
 
@@ -47,14 +48,14 @@ export default defineComponent({
     const currentPage = ref(1)
 
     const compare = () => {
-      for (let i = 1; i <= Object.keys(goodAnswers).length; i++) {
-        if (userAnswers[i] === goodAnswers[i]) { // jesli user answer i correct answer takie same - zwiekszamy counter o 1
+      for (let i = 1; i <= Object.keys(correctAnswers).length; i++) {
+        if (answers[i] === correctAnswers[i]) { // jesli user answer i correct answer takie same - zwiekszamy counter o 1
           storeAnswers.addPoint()
         }
       }
       console.log('wynik:', storeAnswers.counter)
-      console.log(goodAnswers)
-      console.log(userAnswers)
+      console.log(correctAnswers)
+      console.log(answers)
 
     }
 
