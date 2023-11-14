@@ -1,6 +1,5 @@
 <template>
   <IntroResult class="px-96" />
-  <!-- draft -->
   <div class="font-open border-2 border-blue-400 py-10 my-20 mx-72 px-16">
     <div class="flex space-x-20 items-center">
       <div>
@@ -36,7 +35,11 @@ export default defineComponent({
     const storeLevels = useLevelsStore()
     const { a1, a2, b1, b2, c1, c2 } = storeLevels
 
-    const level = ref({})
+    const level = ref({
+      name: '',
+      description: '',
+      title: ''
+    })
 
     const setLevel = () => {
       if(counter < 10) {
