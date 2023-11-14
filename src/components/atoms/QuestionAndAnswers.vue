@@ -59,13 +59,13 @@ export default defineComponent({
     const storeAnswers = useUserAnswersStore()
     const { userAnswers } = storeAnswers
 
-    const obj = ref({} as string)
+    const chosenAnswers = ref({} as string)
 
     const selected = ref(userAnswers[props.id])
 
     const setValue = (ev: Event) => {
       const userAnswer = ((ev.target as HTMLInputElement).value)
-      obj.value = Object.assign(userAnswers, { [props.id]: userAnswer })
+      chosenAnswers.value = Object.assign(userAnswers, { [props.id]: userAnswer })
     }
     return {
       selected,
