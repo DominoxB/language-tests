@@ -5,23 +5,17 @@
     <div class="flex space-x-20 items-center">
       <div>
         <p class="text-2xl font-bold">{{ $t('resultTest') }} {{ counter }}</p>
-        <p class="py-6 text-xl text-blue//-500 font-bold uppercase">poziom B2 - poziom wyższy średnio zaawansowany</p>
-        <p>Osoba posługująca się językiem na tym poziomie rozumie znaczenie głównych wątków przekazu zawartego w złożonych
-          tekstach na tematy konkretne i abstrakcyjne, łącznie z rozumieniem dyskusji na tematy techniczne z zakresu jej
-          specjalności. Potrafi porozumiewać się na tyle płynnie i spontanicznie, by prowadzić normalną rozmowę z rodzimym
-          użytkownikiem danego języka, nie powodując przy tym napięcia u którejkolwiek ze stron. Potrafi formułować
-          przejrzyste wypowiedzi ustne i pisemne w szerokim zakresie tematów, a także wyjaśniać swoje stanowisko w
-          sprawach
-          będących przedmiotem dyskusji, rozważając wady i zalety różnych rozwiązań.</p>
+        <p class="py-6 text-xl text-blue//-500 font-bold uppercase">{{ level.title }}</p>
+        <p>{{ level.description }}</p>
       </div>
-      <LevelSign text="B2" />
+      <LevelSign :text="level.name" />
     </div>
     <BtnAction class="mt-12" :name="$t('checkAnswers')" />
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted } from 'vue'
+import { defineComponent, onMounted, ref } from 'vue'
 import { useUserAnswersStore } from '@/stores/userAnswers'
 import { useLevelsStore } from '@/stores/levelsStore'
 import LevelSign from '@/components/atoms/LevelSign.vue'
@@ -40,21 +34,29 @@ export default defineComponent({
     const { counter } = storeAnswers
 
     const storeLevels = useLevelsStore()
-    const { levels } = storeLevels
+    const { a1, a2, b1, b2, c1, c2 } = storeLevels
+
+    const level = ref({})
 
     const setLevel = () => {
       if(counter < 10) {
-        console.log('A1')
+        console.log(a1)
+        level.value = a1
       } else if (counter > 9 && counter < 15) {
-        console.log('A2')
+        console.log(a2)
+        level.value = a2
       } else if (counter > 14 && counter < 20) {
-        console.log('B1')
+        console.log(b1)
+        level.value = b1
       } else if (counter > 19 && counter < 26) {
-        console.log('B2')
+        console.log(b2)
+        level.value = b2
       } else if (counter > 25 && counter < 29) {
-        console.log('C1')
+        console.log(c1)
+        level.value = c1
       } else {
-        console.log('C2')
+        console.log(c2)
+        level.value = c2
       }
     }
 
@@ -62,7 +64,9 @@ export default defineComponent({
       setLevel()
     })
     return {
-      counter
+      counter,
+      storeLevels,
+      level
     }
   }
 })
