@@ -59,7 +59,6 @@ export default defineComponent({
 
     }
 
-
     const setStore = () => {
       if (path === '/EnglishPage') {
         store.value = storeEn
