@@ -9,7 +9,7 @@
       <BtnStart class="mt-4" @scroll="showTest" :name="$t('start')" :disabled="isBtnDisabled"/>
     </div>
   </div>
-  <TestSheet id="myScroll" v-if="test" class="scroll-mt-24" />
+  <TestSheet id="myScroll" v-if="storeAnswers.test" class="scroll-mt-24" />
 </template>
 
 <script lang="ts">
@@ -17,18 +17,19 @@ import { defineComponent, ref } from 'vue'
 import { useRoute } from 'vue-router'
 import BtnStart from '@/components/atoms/BtnStart.vue'
 import TestSheet from './TestSheet.vue'
+import { useUserAnswersStore } from '@/stores/userAnswers'
 
 export default defineComponent({
-  name: 'InfoEnglish',
+  name: 'InfoTest',
   components: {
     BtnStart,
     TestSheet
   },
   setup() {
-    const test = ref(false)
     const route = useRoute()
     const path = route.path
     const isBtnDisabled = ref(false)
+    const storeAnswers = useUserAnswersStore()
 
     const scrollToTest = () => {
       const myScroll = document.getElementById("myScroll")
@@ -36,17 +37,17 @@ export default defineComponent({
     }
 
     const showTest = () => {
-      test.value = true
+      storeAnswers.test = true
       setTimeout(() => {
         scrollToTest()
       }, 100)
       isBtnDisabled.value = true
     }
     return {
-      test,
       showTest,
       path,
-      isBtnDisabled
+      isBtnDisabled,
+      storeAnswers
     }
   }
 })
