@@ -37,7 +37,6 @@ export default defineComponent({
     }
 
     const showTest = () => {
-      storeTests.test = true
       setTimeout(() => {
         scrollToTest()
       }, 100)
