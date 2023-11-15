@@ -4,7 +4,9 @@ import { defineStore } from "pinia";
 export const useTestsStore = defineStore("Tests", {
   state: () => {
     return {
-      test: false,
+      test: true,
+      selectedTest: '',
+      showAnswers: false
     }
   },
   actions: {
