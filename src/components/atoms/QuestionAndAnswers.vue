@@ -22,10 +22,10 @@
       </div>
     </div>
     <div v-if="testStore.showAnswers" :class="correctAnswers[id] === userAnswers[id] ? 'text-green-600' : 'text-red-600'">
-      <span>Twoja odpowiedź: {{ userAnswers[id] }}</span>
+      <span>{{ $t('yourAnswer')}} {{ userAnswers[id] }}</span>
     </div>
     <div v-if="testStore.showAnswers" class="text-green-600">
-      <span>Poprawna odpowiedź: {{ correctAnswers[id] }} </span>
+      <span>{{$t('correctAnswer')}} {{ correctAnswers[id] }} </span>
     </div>
   </div>
 </template>

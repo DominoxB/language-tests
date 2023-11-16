@@ -42,7 +42,9 @@ const pl = {
   tik: 'TikToku',
   and: 'a także',
   twitter: 'X',
-  write: 'Napisz wiadomość, a ktoś z naszej ekipy odezwie się do Ciebie w przeciągu 24 godzin. Będziemy mogli umówić się wtedy na spotkanie online, gdzie omówimy Twój test, opowiesz nam o swoich językowych potrzebach, a my przedstawimy Ci plan Twojej dalszej przygody z językiem obcym. Pamiętaj - pierwsze spotkanie jest darmowe.'
+  write: 'Napisz wiadomość, a ktoś z naszej ekipy odezwie się do Ciebie w przeciągu 24 godzin. Będziemy mogli umówić się wtedy na spotkanie online, gdzie omówimy Twój test, opowiesz nam o swoich językowych potrzebach, a my przedstawimy Ci plan Twojej dalszej przygody z językiem obcym. Pamiętaj - pierwsze spotkanie jest darmowe.',
+  correctAnswer: 'Poprawna odpowiedź: ',
+  yourAnswer: 'Twoja odpowiedź: '
 }
 
 export default pl;
