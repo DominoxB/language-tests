@@ -21,12 +21,17 @@
         <label for="answerD">{{ answerD }}</label>
       </div>
     </div>
+    <div v-if="testStore.showAnswers === true">
+      <span class="text-green-600">Poprawna odpowiedź: </span>
+    </div>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue'
 import { useUserAnswersStore } from '@/stores/userAnswers'
+import { useTestsStore } from '@/stores/tests'
+
 export default defineComponent({
   name: 'QuestionAndAnswers',
   props: {
@@ -60,6 +65,7 @@ export default defineComponent({
     const { userAnswers } = storeAnswers
 
     const chosenAnswers = ref({} as string)
+    const testStore = useTestsStore()
 
     const selected = ref(userAnswers[props.id])
 
@@ -70,7 +76,8 @@ export default defineComponent({
     return {
       selected,
       setValue,
-      storeAnswers
+      storeAnswers,
+      testStore
     }
   }
 })
