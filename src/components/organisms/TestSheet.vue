@@ -2,7 +2,7 @@
   <div>
     <div id="myScroll" v-for="question in questions.slice(start, end)" :key="question.id">
       <QuestionAndAnswers :id="question.id" :question="question.q" :answerA="question.a" :answerB="question.b"
-        :answerC="question.c" :answerD="question.d" :correct="question.correct">
+        :answerC="question.c" :answerD="question.d">
       </QuestionAndAnswers>
     </div>
     <div class="flex justify-center mx-96 space-x-24">
@@ -16,10 +16,11 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, onUnmounted, ref } from 'vue'
+import { defineComponent, onMounted, onUnmounted, ref } from 'vue'
 import { useQuestionEnglishStore } from '@/stores/testEnglish'
 import { useQuestionRussianStore } from '@/stores/testRussian'
 import { useUserAnswersStore } from '@/stores/userAnswers'
+import { useTestsStore } from '@/stores/tests'
 import { useRoute } from 'vue-router'
 import QuestionAndAnswers from '../atoms/QuestionAndAnswers.vue'
 import BtnAction from '../atoms/BtnAction.vue'
@@ -40,6 +41,8 @@ export default defineComponent({
     const storeAnswers = useUserAnswersStore()
     const { correctAnswers, userAnswers } = storeAnswers
 
+    const testStore = useTestsStore()
+
     const start = ref(0)
     const end = ref(10)
 
@@ -56,23 +59,30 @@ export default defineComponent({
       console.log('wynik:', storeAnswers.counter)
       console.log(correctAnswers)
       console.log(userAnswers)
-
     }
 
     const setStore = () => {
       if (path === '/EnglishPage') {
         store.value = storeEn
         questions.value = questionsEn
+        testStore.selectedTest = 'english'
       } else {
         store.value = storeRu
         questions.value = questionsRu
+        testStore.selectedTest = 'russian'
       }
     }
 
     setStore()
 
+    onMounted(() => {
+      if (testStore.showAnswers) {
+        storeAnswers.$reset()
+      }
+    })
+
     onUnmounted(() => {
-      storeAnswers.$reset()
+      testStore.showAnswers = false
     })
 
     const scrollToBeginning = () => {
