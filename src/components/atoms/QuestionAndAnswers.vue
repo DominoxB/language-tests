@@ -22,7 +22,10 @@
       </div>
     </div>
     <div v-if="testStore.showAnswers === true">
-      <span class="text-green-600">Poprawna odpowiedź: </span>
+      <span class="">Twoja odpowiedź: {{ userAnswers[id] }}</span>
+    </div>
+    <div v-if="testStore.showAnswers === true">
+      <span class="text-green-600">Poprawna odpowiedź: {{ correctAnswers[id] }} </span>
     </div>
   </div>
 </template>
@@ -62,22 +65,27 @@ export default defineComponent({
   },
   setup(props) {
     const storeAnswers = useUserAnswersStore()
-    const { userAnswers } = storeAnswers
+    const { userAnswers, correctAnswers } = storeAnswers
+    const testStore = useTestsStore()
+
 
     const chosenAnswers = ref({} as string)
-    const testStore = useTestsStore()
+    const userAnswer = ref()
 
     const selected = ref(userAnswers[props.id])
 
     const setValue = (ev: Event) => {
-      const userAnswer = ((ev.target as HTMLInputElement).value)
+      userAnswer.value = ((ev.target as HTMLInputElement).value)
       chosenAnswers.value = Object.assign(userAnswers, { [props.id]: userAnswer })
     }
+
     return {
       selected,
       setValue,
       storeAnswers,
-      testStore
+      testStore,
+      userAnswers,
+      correctAnswers
     }
   }
 })
