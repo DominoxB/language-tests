@@ -21,6 +21,7 @@ const pl = {
   info1: 'Przygotowaliśmy dla Ciebie test składający się 30 pytań. Zawierają one zagadnienia z poziomów od A1 do C1. Dzięki tak szerokiemu wachlarzowi pytań będziemy mogli ustalić, jak radzisz sobie z leksyką i gramatyką na różnych poziomach zaawansowania. Nie ma się czego bać :) - wykonanie testu to pierwszy krok w drodze do osiągnięcia celu, jakim jest znajomość języka obcego.',
   info2: 'Na rozwiązanie testu masz nieograniczoną ilość czasu, nie oznacza to jednak, że możesz korzystać z pomocy lub szukać informacji online. Test wykonujesz po to, aby poznać poziom języka obcego jaki reprezentujesz w danej chwili. Dzięki temu dowiesz się, jak powinna wyglądać Twoja ścieżka nauki.',
   info3: 'Pamiętaj, że tylko jedna odpowiedź jest poprawna, nie ma tu pytań wielokrotnego wyboru.',
+  info4: 'Po wykonaniu testu od razu otrzymasz swój wynik wraz z określeniem poziomu językowego oraz jego krótkim opisem. Będziesz mógł także wrócić do swojego testu i sprawdzić, w których pytaniach udzieliłeś poprawnej odpowiedzi, a także gdzie popełniłeś błąd. Trzymamy kciuki! :)',
   start: 'Rozpocznij test',
   wantRussian: 'Chcesz sprawdzić poziom języka rosyjskiego?',
   next: 'Dalej',

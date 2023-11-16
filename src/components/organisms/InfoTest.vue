@@ -5,6 +5,7 @@
     <p class="py-6">{{ $t('info1') }}</p>
     <p>{{ $t('info2') }}</p>
     <p class="py-6">{{ $t('info3') }}</p>
+    <p class="pb-6">{{ $t('info4') }}</p>
     <div class="flex justify-end">
       <BtnStart class="mt-4" @scroll="showTest" :name="$t('start')" :disabled="isBtnDisabled"/>
     </div>
