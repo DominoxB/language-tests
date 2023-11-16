@@ -9,14 +9,16 @@
       </div>
       <LevelSign :text="level.name" />
     </div>
-    <BtnAction class="mt-12" :name="$t('checkAnswers')" />
+      <BtnAction class="mt-12" :name="$t('checkAnswers')" @click="showMyTest"/>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent, onMounted, ref } from 'vue'
+import { useRouter } from 'vue-router'
 import { useUserAnswersStore } from '@/stores/userAnswers'
 import { useLevelsStore } from '@/stores/levelsStore'
+import { useTestsStore } from '@/stores/tests'
 import LevelSign from '@/components/atoms/LevelSign.vue'
 import BtnAction from '@/components/atoms/BtnAction.vue'
 import IntroResult from '@/components/atoms/IntroResult.vue'
@@ -35,11 +37,29 @@ export default defineComponent({
     const storeLevels = useLevelsStore()
     const { a1, a2, b1, b2, c1, c2 } = storeLevels
 
+    const testsStore = useTestsStore()
+    const test = ref('')
+
+    const router = useRouter()
+
+
     const level = ref({
       name: '',
       description: '',
       title: ''
     })
+
+    const showMyTest = () => {
+      test.value = testsStore.selectedTest
+      console.log(test.value)
+      if (test.value === 'english') {
+        testsStore.showAnswers = true
+        router.push('/EnglishPage')
+      } else {
+        testsStore.showAnswers = true
+        router.push('/RussianPage')
+      }
+    }
 
     const setLevel = () => {
       if(counter < 10) {
@@ -69,7 +89,8 @@ export default defineComponent({
     return {
       counter,
       storeLevels,
-      level
+      level,
+      showMyTest
     }
   }
 })
