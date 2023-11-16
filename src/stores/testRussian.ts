@@ -60,7 +60,6 @@ export const useQuestionRussianStore = defineStore("RussianQuestions", {
         b: "по русски",
         c: "по-русски",
         d: "русски",
-        correct: 'c'
       },
       {
         id: 8,
@@ -69,7 +68,6 @@ export const useQuestionRussianStore = defineStore("RussianQuestions", {
         b: "с",
         c: "из",
         d: "y",
-        correct: 'b'
       },
       {
         id: 9,
