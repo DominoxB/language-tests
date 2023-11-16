@@ -21,11 +21,11 @@
         <label for="answerD">{{ answerD }}</label>
       </div>
     </div>
-    <div v-if="testStore.showAnswers === true">
-      <span class="">Twoja odpowiedź: {{ userAnswers[id] }}</span>
+    <div v-if="testStore.showAnswers" :class="correctAnswers[id] === userAnswers[id] ? 'text-green-600' : 'text-red-600'">
+      <span>Twoja odpowiedź: {{ userAnswers[id] }}</span>
     </div>
-    <div v-if="testStore.showAnswers === true">
-      <span class="text-green-600">Poprawna odpowiedź: {{ correctAnswers[id] }} </span>
+    <div v-if="testStore.showAnswers" class="text-green-600">
+      <span>Poprawna odpowiedź: {{ correctAnswers[id] }} </span>
     </div>
   </div>
 </template>
