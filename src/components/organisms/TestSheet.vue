@@ -9,7 +9,7 @@
       <BtnAction :name="$t('previous')" class="flex mb-6" @action="showPreviousQ" v-if="store.currentPage > 1" />
       <BtnAction :name="$t('next')" class="flex mb-6" @action="showNextQ" v-if="store.currentPage < 3" />
       <router-link to="/ResultPage">
-        <BtnAction :name="$t('checkResult')" @click=compare class="flex mb-6" v-if="store.currentPage === 3" />
+        <BtnAction :name="$t('checkResult')" @click="compare" class="flex mb-6" v-if="store.currentPage === 3" />
       </router-link>
     </div>
   </div>
