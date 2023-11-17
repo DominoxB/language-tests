@@ -4,22 +4,22 @@
       {{ `${id + '. '} ` }} {{ question }}
     </div>
     <div class="flex items-center justify-center space-x-16 text-lg border-2 border-blue-300 rounded-2xl py-4 px-4 my-4">
-      <div class="space-x-1">
+      <label class="space-x-1 cursor-pointer">
         <input type="radio" value="a" :name="question" v-model="selected" @change="setValue" />
-        <label for="answerA">{{ answerA }}</label>
-      </div>
-      <div class="space-x-1">
+        <span>{{ answerA }}</span>
+      </label>
+      <label class="space-x-1 cursor-pointer">
         <input type="radio" value="b" :name="question" v-model="selected" @change="setValue" />
-        <label for="answerB">{{ answerB }}</label>
-      </div>
-      <div class="space-x-1">
+        <span>{{ answerB }}</span>
+      </label>
+      <label class="space-x-1 cursor-pointer">
         <input type="radio" value="c" :name="question" v-model="selected" @change="setValue" />
-        <label for="answerC">{{ answerC }}</label>
-      </div>
-      <div class="space-x-1">
+        <span>{{ answerC }}</span>
+      </label>
+      <label class="space-x-1 cursor-pointer">
         <input type="radio" value="d" :name="question" v-model="selected" @change="setValue" />
-        <label for="answerD">{{ answerD }}</label>
-      </div>
+        <span>{{ answerD }}</span>
+      </label>
     </div>
     <div v-if="testStore.showAnswers" :class="correctAnswers[id] === userAnswers[id] ? 'text-green-600' : 'text-red-600'">
       <span>{{ $t('yourAnswer')}} {{ userAnswers[id] }}</span>
