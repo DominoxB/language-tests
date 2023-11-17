@@ -5,19 +5,19 @@
     </div>
     <div class="flex items-center justify-center space-x-16 text-lg border-2 border-blue-300 rounded-2xl py-4 px-4 my-4">
       <label class="space-x-1 cursor-pointer">
-        <input type="radio" value="a" :name="question" v-model="selected" @change="setValue" />
+        <input type="radio" value="a" :name="question" v-model="selected" @change="setValue" :disabled="testStore.showAnswers"/>
         <span>{{ answerA }}</span>
       </label>
       <label class="space-x-1 cursor-pointer">
-        <input type="radio" value="b" :name="question" v-model="selected" @change="setValue" />
+        <input type="radio" value="b" :name="question" v-model="selected" @change="setValue" :disabled="testStore.showAnswers"/>
         <span>{{ answerB }}</span>
       </label>
       <label class="space-x-1 cursor-pointer">
-        <input type="radio" value="c" :name="question" v-model="selected" @change="setValue" />
+        <input type="radio" value="c" :name="question" v-model="selected" @change="setValue" :disabled="testStore.showAnswers"/>
         <span>{{ answerC }}</span>
       </label>
       <label class="space-x-1 cursor-pointer">
-        <input type="radio" value="d" :name="question" v-model="selected" @change="setValue" />
+        <input type="radio" value="d" :name="question" v-model="selected" @change="setValue" :disabled="testStore.showAnswers"/>
         <span>{{ answerD }}</span>
       </label>
     </div>
