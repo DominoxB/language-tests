@@ -51,7 +51,6 @@ export default defineComponent({
 
     const showMyTest = () => {
       test.value = testsStore.selectedTest
-      console.log(test.value)
       if (test.value === 'english') {
         testsStore.showAnswers = true
         router.push('/EnglishPage')
@@ -63,22 +62,16 @@ export default defineComponent({
 
     const setLevel = () => {
       if(counter < 10) {
-        console.log(a1)
         level.value = a1
       } else if (counter > 9 && counter < 15) {
-        console.log(a2)
         level.value = a2
       } else if (counter > 14 && counter < 20) {
-        console.log(b1)
         level.value = b1
       } else if (counter > 19 && counter < 26) {
-        console.log(b2)
         level.value = b2
       } else if (counter > 25 && counter < 29) {
-        console.log(c1)
         level.value = c1
       } else {
-        console.log(c2)
         level.value = c2
       }
     }
