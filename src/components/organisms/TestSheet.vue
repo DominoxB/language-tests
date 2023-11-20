@@ -1,6 +1,7 @@
 <template>
   <div>
     <div id="myScroll" v-for="question in questions.slice(start, end)" :key="question.id">
+      <div v-if="testStore.showAnswers" class="text-center">{{ store.currentPage }}</div>
       <QuestionAndAnswers :id="question.id" :question="question.q" :answerA="question.a" :answerB="question.b"
         :answerC="question.c" :answerD="question.d">
       </QuestionAndAnswers>
@@ -8,9 +9,7 @@
     <div class="flex justify-center mx-96 space-x-24">
       <BtnAction :name="$t('previous')" class="flex mb-6" @action="showPreviousQ" v-if="store.currentPage > 1" />
       <BtnAction :name="$t('next')" class="flex mb-6" @action="showNextQ" v-if="store.currentPage < 3" />
-      <router-link to="/ResultPage">
-        <BtnAction :name="$t('checkResult')" @click="compare" class="flex mb-6" v-if="store.currentPage === 3" />
-      </router-link>
+      <BtnAction :name="$t('checkResult')" @click="compare" class="flex mb-6" v-if="store.currentPage === 3" />
     </div>
   </div>
 </template>
@@ -21,7 +20,7 @@ import { useQuestionEnglishStore } from '@/stores/testEnglish'
 import { useQuestionRussianStore } from '@/stores/testRussian'
 import { useUserAnswersStore } from '@/stores/userAnswers'
 import { useTestsStore } from '@/stores/tests'
-import { useRoute } from 'vue-router'
+import { useRoute, useRouter } from 'vue-router'
 import QuestionAndAnswers from '../atoms/QuestionAndAnswers.vue'
 import BtnAction from '../atoms/BtnAction.vue'
 
@@ -29,6 +28,7 @@ export default defineComponent({
   name: 'TestSheet',
   components: { QuestionAndAnswers, BtnAction },
   setup() {
+    const router = useRouter()
     const route = useRoute()
     const path = route.path
 
@@ -48,7 +48,6 @@ export default defineComponent({
 
     const store = ref()
     const questions = ref()
-    const currentPage = ref(1)
 
     const compare = () => {
       for (let i = 1; i <= Object.keys(correctAnswers).length; i++) {
@@ -56,6 +55,8 @@ export default defineComponent({
           storeAnswers.addPoint()
         }
       }
+      router.push('/ResultPage')
+
       console.log('wynik:', storeAnswers.counter)
       console.log(correctAnswers)
       console.log(userAnswers)
@@ -111,10 +112,10 @@ export default defineComponent({
     return {
       store,
       questions,
-      currentPage,
       path,
       start,
       end,
+      testStore,
       showNextQ,
       showPreviousQ,
       compare
