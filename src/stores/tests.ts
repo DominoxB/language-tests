@@ -8,7 +8,5 @@ export const useTestsStore = defineStore("Tests", {
       selectedTest: '',
       showAnswers: false
     }
-  },
-  actions: {
   }
 })
