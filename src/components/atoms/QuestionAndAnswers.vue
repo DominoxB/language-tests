@@ -4,21 +4,9 @@
       {{ `${id + '. '} ` }} {{ question }}
     </div>
     <div class="flex items-center justify-center space-x-16 text-lg border-2 border-blue-300 rounded-2xl py-4 px-4 my-4">
-      <label class="space-x-1 cursor-pointer">
-        <input type="radio" value="a" :name="question" v-model="selected" @change="setValue" :disabled="testStore.showAnswers"/>
-        <span>{{ answerA }}</span>
-      </label>
-      <label class="space-x-1 cursor-pointer">
-        <input type="radio" value="b" :name="question" v-model="selected" @change="setValue" :disabled="testStore.showAnswers"/>
-        <span>{{ answerB }}</span>
-      </label>
-      <label class="space-x-1 cursor-pointer">
-        <input type="radio" value="c" :name="question" v-model="selected" @change="setValue" :disabled="testStore.showAnswers"/>
-        <span>{{ answerC }}</span>
-      </label>
-      <label class="space-x-1 cursor-pointer">
-        <input type="radio" value="d" :name="question" v-model="selected" @change="setValue" :disabled="testStore.showAnswers"/>
-        <span>{{ answerD }}</span>
+      <label class="space-x-1 cursor-pointer" v-for="(item, value) in items" :key="value">
+        <input type="radio" :value="item.value" :name="question" v-model="selected" @change="setValue" :disabled="testStore.showAnswers" />
+        {{ item.text }}      
       </label>
     </div>
     <div v-if="testStore.showAnswers" :class="correctAnswers[id] === userAnswers[id] ? 'text-green-600' : 'text-red-600'">
@@ -74,6 +62,25 @@ export default defineComponent({
 
     const selected = ref(userAnswers[props.id])
 
+    const items = [
+      {
+        value: 'a',
+        text: props.answerA
+      },
+      {
+        value: 'b',
+        text: props.answerB
+      },
+      {
+        value: 'c',
+        text: props.answerC
+      },
+      {
+        value: 'd',
+        text: props.answerD
+      }
+    ]
+
     const setValue = (ev: Event) => {
       userAnswer.value = ((ev.target as HTMLInputElement).value)
       chosenAnswers.value = Object.assign(userAnswers, { [props.id]: userAnswer })
@@ -85,7 +92,8 @@ export default defineComponent({
       storeAnswers,
       testStore,
       userAnswers,
-      correctAnswers
+      correctAnswers,
+      items
     }
   }
 })
