@@ -49,19 +49,6 @@ export default defineComponent({
     const store = ref()
     const questions = ref()
 
-    const compare = () => {
-      for (let i = 1; i <= Object.keys(correctAnswers).length; i++) {
-        if (userAnswers[i] === correctAnswers[i]) { // jesli user answer i correct answer takie same - zwiekszamy counter o 1
-          storeAnswers.addPoint()
-        }
-      }
-      router.push('/ResultPage')
-
-      console.log('wynik:', storeAnswers.counter)
-      console.log(correctAnswers)
-      console.log(userAnswers)
-    }
-
     const setStore = () => {
       if (path === '/EnglishPage') {
         store.value = storeEn
@@ -75,18 +62,6 @@ export default defineComponent({
     }
 
     setStore()
-
-    onMounted(() => {
-      if (testStore.showAnswers) {
-        storeAnswers.$reset()
-      }
-    })
-
-    onUnmounted(() => {
-      testStore.showAnswers = false
-      storeEn.currentPage = 1
-      storeRu.currentPage = 1
-    })
 
     const scrollToBeginning = () => {
       const myScroll = document.getElementById("myScroll")
@@ -111,6 +86,31 @@ export default defineComponent({
       }, 100)
     }
     
+    const compare = () => {
+      for (let i = 1; i <= Object.keys(correctAnswers).length; i++) {
+        if (userAnswers[i] === correctAnswers[i]) { // jesli user answer i correct answer takie same - zwiekszamy counter o 1
+          storeAnswers.addPoint()
+        }
+      }
+      router.push('/ResultPage')
+
+      console.log('wynik:', storeAnswers.counter)
+      console.log(correctAnswers)
+      console.log(userAnswers)
+    }
+
+    onMounted(() => {
+      if (testStore.showAnswers) {
+        storeAnswers.$reset()
+      }
+    })
+
+    onUnmounted(() => {
+      testStore.showAnswers = false
+      storeEn.currentPage = 1
+      storeRu.currentPage = 1
+    })
+
     return {
       store,
       questions,
