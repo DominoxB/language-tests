@@ -84,6 +84,8 @@ export default defineComponent({
 
     onUnmounted(() => {
       testStore.showAnswers = false
+      storeEn.currentPage = 1
+      storeRu.currentPage = 1
     })
 
     const scrollToBeginning = () => {
