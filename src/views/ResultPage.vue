@@ -9,7 +9,10 @@
       </div>
       <LevelSign :text="level.name" />
     </div>
+    <div class="flex justify-between">
+      <BtnAction class="mt-12" name="Rozwiąż test ponownie" @click="testAgain"/>
       <BtnAction class="mt-12" :name="$t('checkAnswers')" @click="showMyTest"/>
+    </div>
   </div>
 </template>
 
@@ -60,6 +63,17 @@ export default defineComponent({
       }
     }
 
+    const testAgain = () => {
+      test.value = testsStore.selectedTest
+      if (test.value === 'english') {
+        storeAnswers.$reset()
+        router.push('/EnglishPage')
+      } else {
+        storeAnswers.$reset()
+        router.push('/RussianPage')
+      }
+    }
+
     const setLevel = () => {
       if(counter < 10) {
         level.value = a1
@@ -85,7 +99,9 @@ export default defineComponent({
       counter,
       storeLevels,
       level,
-      showMyTest
+      showMyTest,
+      testAgain,
+      test
     }
   }
 })
