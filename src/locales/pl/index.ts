@@ -47,7 +47,7 @@ const pl = {
   yourAnswer: 'Twoja odpowiedź: ',
   testAgain: 'Rozwiąż test ponownie',
   a0: {
-    title: 'A0 - poziom start ',
+    title: 'A0 - poziom start',
     description: 'Brak znajomości języka. Na szczęście każdy moment jest dobry, aby zacząć naukę, dlatego nie ma na co czekać. Rozpocznij naukę języka obcego razem z nami!'
   },
   a1: {

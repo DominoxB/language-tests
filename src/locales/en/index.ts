@@ -45,7 +45,36 @@ const en = {
   write: 'Write a message and someone from our team will contact you within 24 hours. We will then be able to arrange an online meeting where we will discuss your test, tell us about your linguistic needs, and we will present you with a plan for your further adventure with a foreign language. Remember - the first meeting is free.',
   correctAnswer: 'Correct answer: ',
   yourAnswer: 'Your answer: ',
-  testAgain: 'Solve the test again'
+  testAgain: 'Solve the test again',
+  a0: {
+    title: 'A0 - starting level',
+    description: 'No knowledge of the language. Fortunately, any time is a good time to start learning, so there is nothing to wait for. Start learning a foreign language with us!'
+  },
+  a1: {
+    title: 'A1 - beginner level',
+    description: 'A person who speaks the language at this level understands and is able to use basic colloquial phrases and expressions related to everyday life. He can introduce himself and others and formulate questions about his private life, e.g. about the place where he lives, the people he knows and the things he has. Can carry on a simple conversation provided the interlocutor speaks slowly, understandably and is ready to help.'
+  },
+  a2: {
+    title: 'A2 - lower intermediate level',
+    description: 'A person speaking the language at this level understands statements and frequently used expressions related to everyday life (e.g. basic information about the interlocutor and his family, shopping, surroundings, work). Can communicate in simple, routine communication situations requiring only a simple, direct exchange of information on familiar and typical topics. Can describe in a simple way his or her background, surroundings, and discuss matters related to the most important needs of everyday life.'
+  },
+  b1: {
+    title: 'B1 - intermediate level',
+    description: 'A person speaking the language at this level understands the meaning of the main threads of the message contained in clear, standard statements that concern familiar issues and events typical of work, school, free time, etc. Can cope with most communication situations that may occur while traveling in the area where the language is spoken. Can create simple, coherent statements on topics that are familiar to her or that interest her. Can describe experiences, events, dreams, hopes and aspirations, briefly justifying or explaining their opinions and plans.'
+  },
+  b2: {
+    title: 'B2 - upper intermediate level',
+    description: 'A person using the language at this level understands the meaning of the main threads of the message contained in complex texts on concrete and abstract topics, including understanding discussions on technical topics in the field of his/her field of specialization. Can communicate fluently and spontaneously enough to conduct a normal conversation with a native speaker of a given language without causing any tension to either party. Can produce clear oral and written statements on a wide range of topics and explain his/her position on issues under discussion, weighing the advantages and disadvantages of different solutions.'
+  },
+  c1: {
+    title: 'C1 - advanced level',
+    description: 'A person speaking the language at this level understands a wide range of difficult, longer texts, also recognizing hidden, indirect meanings. Can speak fluently, spontaneously, finding the right phrases without much difficulty. Can use the language effectively and freely in social, educational and professional contacts. Can formulate clear, well-structured, detailed statements regarding complex problems, efficiently and properly using the rules of organizing statements, connectors and indicators of text connection.'
+  },
+  c2: {
+    title: 'C2 - professional/native level',
+    description: 'A person who speaks the language at this level can easily understand almost everything he hears or reads. Can summarize information from other sources, written or spoken, in a coherent manner, reconstructing the theses and explanations contained therein. He can express his thoughts very fluently, spontaneously and precisely, subtly differentiating shades of meaning even in more complex statements.'
+  }
+
 }
 
 export default en;
