@@ -15,12 +15,12 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted, onUnmounted, ref } from 'vue'
+import { defineComponent, onUnmounted, ref } from 'vue'
 import { useQuestionEnglishStore } from '@/stores/testEnglish'
 import { useQuestionRussianStore } from '@/stores/testRussian'
 import { useUserAnswersStore } from '@/stores/userAnswers'
 import { useTestsStore } from '@/stores/tests'
-import { useRoute, useRouter } from 'vue-router'
+import { useRoute, useRouter, onBeforeRouteLeave } from 'vue-router'
 import QuestionAndAnswers from '../atoms/QuestionAndAnswers.vue'
 import BtnAction from '../atoms/BtnAction.vue'
 
@@ -37,7 +37,7 @@ export default defineComponent({
 
     const storeRu = useQuestionRussianStore()
     const { questionsRu } = storeRu
-    
+
     const storeAnswers = useUserAnswersStore()
     const { correctAnswers, userAnswers } = storeAnswers
 
@@ -85,7 +85,7 @@ export default defineComponent({
         scrollToBeginning()
       }, 100)
     }
-    
+
     const compare = () => {
       for (let i = 1; i <= Object.keys(correctAnswers).length; i++) {
         if (userAnswers[i] === correctAnswers[i]) { // jesli user answer i correct answer takie same - zwiekszamy counter o 1
@@ -99,10 +99,19 @@ export default defineComponent({
       console.log(userAnswers)
     }
 
-    onMounted(() => {
-      if (testStore.showAnswers) {
+    // onMounted(() => {
+    //   if (testStore.showAnswers) {
+    //     storeAnswers.$reset()
+    //   }
+    // })
+
+    onBeforeRouteLeave(async (to, from) => {
+      if (to.path === '/RussianPage' && from.path === '/EnglishPage' ||
+        to.path === '/EnglishPage' && from.path === '/RussianPage') {
         storeAnswers.$reset()
-      }
+        console.log(to.path)
+        console.log(from.path)
+      } 
     })
 
     onUnmounted(() => {
