@@ -73,8 +73,8 @@ const en = {
   c2: {
     title: 'C2 - professional/native level',
     description: 'A person who speaks the language at this level can easily understand almost everything he hears or reads. Can summarize information from other sources, written or spoken, in a coherent manner, reconstructing the theses and explanations contained therein. He can express his thoughts very fluently, spontaneously and precisely, subtly differentiating shades of meaning even in more complex statements.'
-  }
-
+  },
+  solveAgain: 'Solve the test again'
 }
 
 export default en;

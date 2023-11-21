@@ -10,7 +10,7 @@
       <LevelSign :text="level.name" />
     </div>
     <div class="flex justify-between">
-      <BtnAction class="mt-12" name="Rozwiąż test ponownie" @click="testAgain"/>
+      <BtnAction class="mt-12" :name="$t('solveAgain')" @click="testAgain"/>
       <BtnAction class="mt-12" :name="$t('checkAnswers')" @click="showMyTest"/>
     </div>
   </div>
