@@ -38,7 +38,7 @@ export default defineComponent({
     const { counter } = storeAnswers
 
     const storeLevels = useLevelsStore()
-    const { a1, a2, b1, b2, c1, c2 } = storeLevels
+    const { a0, a1, a2, b1, b2, c1, c2 } = storeLevels
 
     const testsStore = useTestsStore()
     const test = ref('')
@@ -75,7 +75,9 @@ export default defineComponent({
     }
 
     const setLevel = () => {
-      if(counter < 10) {
+      if (counter <= 2) {
+        level.value = a0
+      } else if (counter > 2 && counter < 10) {
         level.value = a1
       } else if (counter > 9 && counter < 15) {
         level.value = a2

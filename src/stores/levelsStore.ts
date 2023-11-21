@@ -3,6 +3,11 @@ import { defineStore } from "pinia";
 // API simulation (mocked data)
 export const useLevelsStore = defineStore("LangLevels", {
   state: () => ({
+      a0: {
+        name: 'A0',
+        title: 'A0 - poziom start ',
+        description: 'Brak znajomości języka. Na szczęście każdy moment jest dobry, aby zacząć naukę, dlatego nie ma na co czekać. Rozpocznij naukę języka obcego razem z nami!'
+      },
       a1: {
         name: 'A1',
         title: 'A1 - poziom początkujący',
