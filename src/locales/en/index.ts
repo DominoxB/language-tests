@@ -44,8 +44,8 @@ const en = {
   twitter: 'X',
   write: 'Write a message and someone from our team will contact you within 24 hours. We will then be able to arrange an online meeting where we will discuss your test, tell us about your linguistic needs, and we will present you with a plan for your further adventure with a foreign language. Remember - the first meeting is free.',
   correctAnswer: 'Correct answer: ',
-  yourAnswer: 'Your answer: '
-
+  yourAnswer: 'Your answer: ',
+  testAgain: 'Solve the test again'
 }
 
 export default en;
