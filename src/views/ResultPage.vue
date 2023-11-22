@@ -18,7 +18,7 @@
 
 <script lang="ts">
 import { defineComponent, onMounted, ref } from 'vue'
-import { useRouter } from 'vue-router'
+import { useRouter, onBeforeRouteLeave } from 'vue-router'
 import { useUserAnswersStore } from '@/stores/userAnswers'
 import { useLevelsStore } from '@/stores/levelsStore'
 import { useTestsStore } from '@/stores/tests'
@@ -97,6 +97,14 @@ export default defineComponent({
       const myScroll = document.getElementById("myScroll")
       myScroll?.scrollIntoView({ behavior: "smooth" })
     })
+
+    onBeforeRouteLeave(async (to, from) => {
+      if (to.path === '/RussianPage' && from.path === '/ResultPage' && test.value !== 'russian' ||
+        to.path === '/EnglishPage' && from.path === '/ResultPage' && test.value !== 'english') {
+        storeAnswers.$reset()
+      } 
+    })
+
     return {
       counter,
       storeLevels,
