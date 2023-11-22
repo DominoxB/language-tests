@@ -2,7 +2,7 @@
   <div class="bg-russian h-[550px] w-full p-20">
     <div class="flex items-center justify-center">
       <LanguageTile :title="$t('russianTile')"
-        icon="https://png.pngtree.com/png-clipart/20230916/original/pngtree-russian-flag-round-vector-png-image_12250405.png" />
+        icon="https://cdn-icons-png.flaticon.com/128/4628/4628645.png?ga=GA1.1.1077292613.1698915214&semt=ais" />
     </div>
     <BtnArrowDown class="mx-auto mt-8 animate-bounce" @scroll="scrollDown" v-if="!testStore.showAnswers" />
   </div>
