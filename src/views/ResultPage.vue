@@ -45,7 +45,6 @@ export default defineComponent({
 
     const router = useRouter()
 
-
     const level = ref({
       name: '',
       description: '',

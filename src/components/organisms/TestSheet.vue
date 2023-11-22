@@ -9,7 +9,7 @@
     <div class="flex justify-center mx-96 space-x-24">
       <BtnAction :name="$t('previous')" class="flex mb-6" @action="showPreviousQ" v-if="store.currentPage > 1" />
       <BtnAction :name="$t('next')" class="flex mb-6" @action="showNextQ" v-if="store.currentPage < 3" />
-      <BtnAction :name="$t('checkResult')" @click="compare" class="flex mb-6" v-if="store.currentPage === 3" />
+      <BtnAction :name="$t('checkResult')" @action="compare" class="flex mb-6" v-if="store.currentPage === 3" />
     </div>
   </div>
 </template>
@@ -87,29 +87,23 @@ export default defineComponent({
     }
 
     const compare = () => {
-      for (let i = 1; i <= Object.keys(correctAnswers).length; i++) {
-        if (userAnswers[i] === correctAnswers[i]) { // jesli user answer i correct answer takie same - zwiekszamy counter o 1
-          storeAnswers.addPoint()
+      if (!testStore.showAnswers) {
+        for (let i = 1; i <= Object.keys(correctAnswers).length; i++) {
+          if (userAnswers[i] === correctAnswers[i]) { // jesli user answer i correct answer takie same - zwiekszamy counter o 1
+            storeAnswers.addPoint()
+          }
         }
+        router.push('/ResultPage')
+      } else {
+        router.push('/ResultPage')
       }
-      router.push('/ResultPage')
-
-      console.log('wynik:', storeAnswers.counter)
-      console.log(correctAnswers)
-      console.log(userAnswers)
     }
 
     onBeforeRouteLeave(async (to, from) => {
       if (to.path === '/RussianPage' && from.path === '/EnglishPage' ||
         to.path === '/EnglishPage' && from.path === '/RussianPage') {
         storeAnswers.$reset()
-        console.log(to.path)
-        console.log(from.path)
-      } 
-       else if (to.path === '/RussianPage' && from.path === '/ResultPage' ||
-        to.path === '/EnglishPage' && from.path === '/ResultPage') {
-        storeAnswers.$reset()
-      } 
+      }
     })
 
     onUnmounted(() => {
