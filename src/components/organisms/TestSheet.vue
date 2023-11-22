@@ -101,7 +101,9 @@ export default defineComponent({
 
     onBeforeRouteLeave(async (to, from) => {
       if (to.path === '/RussianPage' && from.path === '/EnglishPage' ||
-        to.path === '/EnglishPage' && from.path === '/RussianPage') {
+        to.path === '/EnglishPage' && from.path === '/RussianPage' ||
+        to.path === '/' && from.path === '/EnglishPage' ||
+        to.path === '/' && from.path === '/RussianPage') {
         storeAnswers.$reset()
       }
     })
