@@ -99,12 +99,6 @@ export default defineComponent({
       console.log(userAnswers)
     }
 
-    // onMounted(() => {
-    //   if (testStore.showAnswers) {
-    //     storeAnswers.$reset()
-    //   }
-    // })
-
     onBeforeRouteLeave(async (to, from) => {
       if (to.path === '/RussianPage' && from.path === '/EnglishPage' ||
         to.path === '/EnglishPage' && from.path === '/RussianPage') {
