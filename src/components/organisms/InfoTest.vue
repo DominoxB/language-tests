@@ -7,7 +7,7 @@
     <p class="py-6">{{ $t('info3') }}</p>
     <p class="pb-6">{{ $t('info4') }}</p>
     <div class="flex justify-center">
-      <BtnStart class="mt-4" @scroll="showTest" :name="$t('start')" :disabled="isBtnDisabled"/>
+      <BtnStart class="mt-4" @scroll="showTest" :name="$t('start')" />
     </div>
   </div>
   <TestSheet id="myScroll" v-if="storeTests.test" class="scroll-mt-24" />
@@ -29,7 +29,6 @@ export default defineComponent({
   setup() {
     const route = useRoute()
     const path = route.path
-    const isBtnDisabled = ref(false)
     const storeTests = useTestsStore()
 
     const scrollToTest = () => {
@@ -41,12 +40,10 @@ export default defineComponent({
       setTimeout(() => {
         scrollToTest()
       }, 100)
-      isBtnDisabled.value = true
     }
     return {
       showTest,
       path,
-      isBtnDisabled,
       storeTests
     }
   }
