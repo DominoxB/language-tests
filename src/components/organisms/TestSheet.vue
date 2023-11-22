@@ -112,6 +112,10 @@ export default defineComponent({
         console.log(to.path)
         console.log(from.path)
       } 
+       else if (to.path === '/RussianPage' && from.path === '/ResultPage' ||
+        to.path === '/EnglishPage' && from.path === '/ResultPage') {
+        storeAnswers.$reset()
+      } 
     })
 
     onUnmounted(() => {
