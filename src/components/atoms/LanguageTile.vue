@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-white flex items-center justify-center text-center opacity-70 w-80 h-80 rounded-full font-open">
+  <div class="bg-white flex items-center justify-center text-center opacity-80 w-80 h-80 rounded-full font-open">
     <div>
       <span class="mt-24 text-3xl font-semibold text-slate-800">{{ title.toUpperCase() }}</span>
       <div class="h-px bg-black mt-2"></div>
