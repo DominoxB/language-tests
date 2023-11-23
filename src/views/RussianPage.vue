@@ -1,10 +1,10 @@
 <template>
-  <div class="bg-russian h-[550px] w-full p-20">
+  <div class="bg-russian bg-cover p-5 md:p-20">
     <div class="flex items-center justify-center">
       <LanguageTile :title="$t('russianTile')"
         icon="https://cdn-icons-png.flaticon.com/128/4628/4628645.png?ga=GA1.1.1077292613.1698915214&semt=ais" />
     </div>
-    <BtnArrowDown class="mx-auto mt-8 animate-bounce" @scroll="scrollDown" v-if="!testStore.showAnswers" />
+    <BtnArrowDown class="mx-auto mt-8 animate-bounce hidden lg:flex " @scroll="scrollDown" v-if="!testStore.showAnswers" />
   </div>
   <InfoTest />
 </template>
