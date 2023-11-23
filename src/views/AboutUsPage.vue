@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-faces h-screen w-full p-32 font-open text-xl space-y-8 text-justify">
+  <div class="bg-faces w-full md:h-screen p-12 md:p-32 font-open text-xl space-y-8 text-justify">
     <p class="text-4xl mb-16">{{ $t('us')}}</p>
     <p>{{ $t('tutors') }}</p>
     <p>{{ $t('ourTests') }}</p>
