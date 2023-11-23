@@ -7,7 +7,7 @@
     <p class="py-6">{{ $t('info3') }}</p>
     <p class="pb-6">{{ $t('info4') }}</p>
     <div class="flex justify-center">
-      <BtnStart class="mt-4" @scroll="showTest" :name="$t('start')" />
+      <BtnStart class="mt-4 hidden lg:flex" @scroll="showTest" :name="$t('start')" />
     </div>
   </div>
   <TestSheet id="myScroll" v-if="storeTests.test" class="scroll-mt-24" />
