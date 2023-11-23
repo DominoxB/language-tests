@@ -1,10 +1,10 @@
 <template>
-  <div class="font-open px-96 py-4">
-    <div class="text-2xl">
+  <div class="font-open px-2 lg:px-10 xl:px-96 py-4">
+    <div class="text-xl lg:text-2xl font-bold">
       {{ `${id + '. '} ` }} {{ question }}
     </div>
-    <div class="flex items-center justify-center space-x-16 text-lg border-2 border-blue-300 rounded-2xl py-4 px-4 my-4">
-      <label class="space-x-1" v-for="(item, value) in items" :key="value">
+    <div class="lg:flex items-center justify-center lg:space-x-16 text-lg border-2 border-blue-300 rounded-2xl py-4 px-4 my-4">
+      <label class="space-x-1 block" v-for="(item, value) in items" :key="value">
         <input type="radio" :value="item.value" :name="question" v-model="selected" @change="setValue" :disabled="testStore.showAnswers" />
         {{ item.text }}      
       </label>

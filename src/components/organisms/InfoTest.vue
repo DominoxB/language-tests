@@ -1,7 +1,7 @@
 <template>
-  <div class="font-open border-2 border-blue-200 p-10 my-20 mx-64" id="myScroll" v-if="!storeTests.showAnswers">
-    <div class="text-3xl" v-if="path === '/EnglishPage'">{{ $t('wantEnglish') }}</div>
-    <div class="text-3xl" v-else>{{ $t('wantRussian') }}</div>
+  <div class="font-open border-2 border-blue-200 text-justify p-4 lg:p-10 my-10 lg:my-20 mx-4 xl:mx-64" id="myScroll" v-if="!storeTests.showAnswers">
+    <div class="text-2xl md:text-3xl text-center" v-if="path === '/EnglishPage'">{{ $t('wantEnglish') }}</div>
+    <div class="text-3xl text-center" v-else>{{ $t('wantRussian') }}</div>
     <p class="py-6">{{ $t('info1') }}</p>
     <p>{{ $t('info2') }}</p>
     <p class="py-6">{{ $t('info3') }}</p>
@@ -14,7 +14,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue'
+import { defineComponent } from 'vue'
 import { useRoute } from 'vue-router'
 import BtnStart from '@/components/atoms/BtnStart.vue'
 import TestSheet from './TestSheet.vue'

@@ -1,7 +1,7 @@
 <template>
   <div class="bg-blue-500 px-2 md:px-8 py-4 flex justify-between items-center text-white font-open md:text-lg top-0 sticky z-20">
     <NameAndLogo />
-    <div class="flex space-x-2 md:space-x-10 md:mr-8">
+    <div class="flex space-x-1 md:space-x-10 md:mr-8">
       <TestSelectionNav />
       <router-link to="/AboutUsPage">{{ $t('aboutUs') }}</router-link>
       <div id="charger" class="text-white">

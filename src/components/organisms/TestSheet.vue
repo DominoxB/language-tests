@@ -1,12 +1,11 @@
 <template>
   <div>
     <div id="myScroll" v-for="question in questions.slice(start, end)" :key="question.id">
-      <div v-if="testStore.showAnswers" class="text-center">{{ store.currentPage }}</div>
       <QuestionAndAnswers :id="question.id" :question="question.q" :answerA="question.a" :answerB="question.b"
         :answerC="question.c" :answerD="question.d">
       </QuestionAndAnswers>
     </div>
-    <div class="flex justify-center mx-96 space-x-24">
+    <div class="flex justify-center lg:mx-96 space-x-2 lg:space-x-24">
       <BtnAction :name="$t('previous')" class="flex mb-6" @action="showPreviousQ" v-if="store.currentPage > 1" />
       <BtnAction :name="$t('next')" class="flex mb-6" @action="showNextQ" v-if="store.currentPage < 3" />
       <BtnAction :name="$t('checkResult')" @action="compare" class="flex mb-6" v-if="store.currentPage === 3" />
