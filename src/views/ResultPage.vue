@@ -1,17 +1,17 @@
 <template>
-  <IntroResult class="px-96" id="myScroll"/>
-  <div class="font-open border-2 border-blue-400 py-10 my-20 mx-72 px-16">
-    <div class="flex space-x-20 items-center">
+  <IntroResult id="myScroll"/>
+  <div class="font-open border-2 border-blue-400 py-10 my-20 mx-4 xl:mx-72 px-4 md:px-16">
+    <div class="xl:flex xl:space-x-20 items-center">
       <div>
         <p class="text-2xl font-bold">{{ $t('resultTest') }} {{ counter }}</p>
         <p class="py-6 text-xl text-blue//-500 font-bold uppercase">{{ level.title }}</p>
         <p>{{ level.description }}</p>
       </div>
-      <LevelSign :text="level.name" />
+      <LevelSign :text="level.name" class="flex justify-center my-8"/>
     </div>
     <div class="flex justify-center space-x-8">
-      <BtnAction class="mt-12" :name="$t('solveAgain')" @click="testAgain"/>
-      <BtnAction class="mt-12" :name="$t('checkAnswers')" @click="showMyTest"/>
+      <BtnAction class="xl:mt-12" :name="$t('solveAgain')" @click="testAgain"/>
+      <BtnAction class="xl:mt-12" :name="$t('checkAnswers')" @click="showMyTest"/>
     </div>
   </div>
 </template>
