@@ -1,13 +1,13 @@
 <template>
-  <div class="w-full bg-test md:py-20 flex items-center justify-center font-open">
+  <div class="w-full bg-test bg-cover py-8 md:py-20 flex items-center justify-center font-open">
     <transition name="text" appear enter-active-class="transition-all duration-1000 ease-in"
       enter-from-class="opacity-0 translate-x-[500px]">
-      <div class="mx-20 md:mx-[500px] text-center text-white">
-        <p class="text-xl md:text-[45px] my-4 leading-snug font-semibold">
+      <div class="mx-10 md:mx-[100px] xl:mx-[300px] text-center text-white">
+        <p class="text-2xl md:text-[45px] my-4 leading-snug font-semibold">
           {{ $t('question') }}
         </p>
         <div class="bg-blue-500 w-64 h-1 mx-auto mb-8"></div>
-        <p class="md:text-xl mb-8">
+        <p class="text-lg md:text-xl mb-8">
           {{ $t('intro') }}
         </p>
         <BtnArrowDown class="mx-auto animate-bounce" @scroll="scrollDown" />

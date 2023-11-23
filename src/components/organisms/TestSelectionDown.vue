@@ -1,6 +1,6 @@
 <template>
   <div class="bg-slate-100 font-open pb-16 text-center">
-    <h3 class="text-lg md:text-[27px] pt-8">{{ $t('testDown') }}</h3>
+    <h3 class="text-lg md:text-[27px] px-3 pt-8">{{ $t('testDown') }}</h3>
     <div class="flex justify-center mt-12 space-x-4 md:space-x-16">
       <router-link to="/EnglishPage">
         <TestSelectionDownItem :name="$t('english')" flag="https://img.icons8.com/offices/30/great-britain.png" />
