@@ -17,7 +17,7 @@
       </div>
     </button>
     <div :class="{ '-translate-x-full': !show }"
-      class="fixed h-[148px] w-full block text-lg text-white text-center border py-2 bg-blue-600 top-16 bottom-0 left-0 transition duration-300">
+      class="fixed h-[148px] w-full block text-lg text-white text-center py-2 bg-blue-600 top-16 bottom-0 left-0 transition duration-300">
       <div class="py-2 flex items-center justify-center hover:bg-blue-500 cursor-pointer"
         @click="clickLink('/EnglishPage')">
         <img src="https://img.icons8.com/offices/30/great-britain.png" alt="flag" class="w-5 mr-2" />
