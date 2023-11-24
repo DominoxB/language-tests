@@ -18,7 +18,7 @@ export const useQuestionEnglishStore = defineStore("EnglishQuestions", {
         a: "but 2 cats",
         b: "and 3 cats",
         c: "and 2 dogs",
-        d: "or many cats.",
+        d: "or many cats",
       },
       {
         id: 3,
