@@ -10,7 +10,7 @@
         <p class="text-lg md:text-xl mb-8">
           {{ $t('intro') }}
         </p>
-        <BtnArrowDown class="mx-auto animate-bounce" @scroll="scrollDown" />
+        <BtnArrowDown class="mx-auto animate-bounce hidden md:flex" @scroll="scrollDown" />
         <p class="opacity-30 text-right text-xs md:text-sm">{{ $t('freepik1') }} <a
             href="https://www.freepik.com/free-photo/public-examination-preparation-concept_25077294.htm#query=answer%20sheet&position=1&from_view=search&track=ais#position=1&query=answer%20sheet">{{
               $t('freepik2') }}</a></p>
