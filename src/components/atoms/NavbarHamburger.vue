@@ -1,12 +1,11 @@
 <template>
-  <div class="mr-6">
+  <div class="flex items-center">
     <button @click="clickHamburger" class="relative group">
-      <div class="flex overflow-hidden items-center justify-center z-60">
         <div
           class="flex flex-col justify-between w-[20px] h-[20px] transform transition-all origin-center overflow-hidden">
-          <div :class="{ 'translate-x-10': show }" class="bg-white h-[2px] w-7 origin-left"></div>
-          <div :class="{ 'translate-x-10': show }" class="bg-white h-[2px] w-7 origin-left"></div>
-          <div :class="{ 'translate-x-10': show }" class="bg-white h-[3px] w-7 origin-left"></div>
+          <div :class="{ 'translate-x-10': show }" class="bg-white h-[2px] w-7"></div>
+          <div :class="{ 'translate-x-10': show }" class="bg-white h-[2px] w-7"></div>
+          <div :class="{ 'translate-x-10': show }" class="bg-white h-[2px] w-7"></div>
           <div class="absolute items-center justify-between transform transition-all top-2.5 flex">
             <div :class="{ 'rotate-45': show }"
               class="absolute bg-white h-[2px] w-5 transform transition-all duration-200 delay-100"></div>
@@ -14,7 +13,6 @@
               class="absolute bg-white h-[2px] w-5 transform transition-all duration-200 delay-100"></div>
           </div>
         </div>
-      </div>
     </button>
     <div :class="{ '-translate-x-full': !show }"
       class="fixed h-[148px] w-full block text-lg text-white text-center py-2 bg-blue-600 top-16 bottom-0 left-0 transition duration-300">
