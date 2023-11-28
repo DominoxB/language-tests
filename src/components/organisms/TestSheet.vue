@@ -1,6 +1,7 @@
 <template>
   <div>
     <div id="myScroll" v-for="question in questions.slice(start, end)" :key="question.id">
+      <BtnAction v-if="testStore.showAnswers" class="xl:mt-12" name="Pobierz PDF" @click="export2Pdf"/>
       <QuestionAndAnswers :id="question.id" :question="question.q" :answerA="question.a" :answerB="question.b"
         :answerC="question.c" :answerD="question.d">
       </QuestionAndAnswers>
@@ -22,6 +23,7 @@ import { useTestsStore } from '@/stores/tests'
 import { useRoute, useRouter, onBeforeRouteLeave } from 'vue-router'
 import QuestionAndAnswers from '../atoms/QuestionAndAnswers.vue'
 import BtnAction from '../atoms/BtnAction.vue'
+import html2pdf from 'html2pdf.js'
 
 export default defineComponent({
   name: 'TestSheet',
@@ -113,6 +115,14 @@ export default defineComponent({
       storeRu.currentPage = 1
     })
 
+    const export2Pdf = () => {
+      html2pdf(document.getElementById('myScroll'), {
+          filename: 'your-test.pdf',
+      })
+      console.log(html2pdf)
+    }
+
+
     return {
       store,
       questions,
@@ -122,7 +132,8 @@ export default defineComponent({
       testStore,
       showNextQ,
       showPreviousQ,
-      compare
+      compare,
+      export2Pdf
     }
   }
 })
