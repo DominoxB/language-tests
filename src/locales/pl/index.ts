@@ -31,7 +31,7 @@ const pl = {
   introResult1: 'Poniżej znajduje się Twój wynik: ilość punktów, wartość procentowa oraz przypisanie do poziomu wraz z jego opisem. Mamy nadzieję, że jesteś zadowolony :)',
   introResult2: 'Jeśli nie to pamiętaj, że człowiek uczy się całe życie i nigdy nie jest za późno na naukę języka. Jesteś w idealnym momencie, aby się tym zająć :)',
   resultTest: 'Twój wynik:',
-  checkAnswers: 'Sprawdź odpowiedzi',
+  checkAnswers: 'Sprawdź odpowiedzi i pobierz PDF',
   us: 'O nas',
   tutors: 'Jesteśmy grupą przyjaciół pasjonujących się nauką języka obcego. Każdy z nas ma wykształcenie pedagogiczne oraz filologiczne, dlatego możemy powiedzieć, że jesteśmy specjalistami w tym temacie :) W naszym gronie mamy absolwentów Oxfordu, a także wybitnych polskich uczelni, jak Uniwersytet Mikołaja Kopernika w Toruniu, Uniwersytet Gdański, Uniwersytet Jagielloński w Krakowie. Lata doświadczeń jako nauczyciele/korepetytorzy, dały nam mnóstwo inspiracji, pozwoliły zaobserwować, jakie problemy pojawiają się podczas nauki, ale przede wszystkim, jak sobie z nimi radzić. Dzięki temu nawet dla tych z Was, dla których nauka języka obcego zawsze była utrapieniem, znajdziemy jakieś rozwiązanie.',
   ourTests: 'Testy przez nas przygotowane są sprawdzianem podstawowych umiejętności ucznia. Szeroki przekrój tematyczny i gramatyczny daje nam doskonały obraz tego, w jakim kierunku powinna toczyć się dalsza nauka. Jeśli chcesz nawiązać współpracę lub sprawdzić, co mamy Ci do zaoferowania skontaktuj się z nami po wykonaniu testu. Będziemy mogli wspólnie przeanalizować Twoje odpowiedzi, sprawdzić, w jakich momentach potrzebujesz wsparcia. Pierwsze spotkanie wraz z omówieniem testu poziomującego jest darmowe :). Z nami języki przestaną być obce!',
