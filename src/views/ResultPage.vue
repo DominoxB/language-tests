@@ -32,7 +32,7 @@ export default defineComponent({
     LevelSign,
     BtnAction,
     IntroResult
-  },
+ },
   setup() {
     const storeAnswers = useUserAnswersStore()
     const { counter } = storeAnswers
