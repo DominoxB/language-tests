@@ -1,7 +1,6 @@
 <template>
-  <div>
+  <div v-if="!testStore.showAnswers">
     <div id="myScroll" v-for="question in questions.slice(start, end)" :key="question.id">
-      <BtnAction v-if="testStore.showAnswers" class="xl:mt-12" name="Pobierz PDF" @click="export2Pdf"/>
       <QuestionAndAnswers :id="question.id" :question="question.q" :answerA="question.a" :answerB="question.b"
         :answerC="question.c" :answerD="question.d">
       </QuestionAndAnswers>
@@ -11,6 +10,15 @@
       <BtnAction :name="$t('next')" class="flex mb-6" @action="showNextQ" v-if="store.currentPage < 3" />
       <BtnAction :name="$t('checkResult')" @action="compare" class="flex mb-6" v-if="store.currentPage === 3" />
     </div>
+  </div>
+  <div v-else>
+    <BtnAction v-if="testStore.showAnswers" class="xl:mt-12" name="Pobierz PDF" @click="createPdf" />
+    <div id="myScroll" v-for="question in questions" :key="question.id">
+      <QuestionAndAnswers :id="question.id" :question="question.q" :answerA="question.a" :answerB="question.b"
+        :answerC="question.c" :answerD="question.d">
+      </QuestionAndAnswers>
+    </div>
+    <BtnAction :name="$t('checkResult')" @action="compare" class="flex mb-6" />
   </div>
 </template>
 
@@ -23,7 +31,8 @@ import { useTestsStore } from '@/stores/tests'
 import { useRoute, useRouter, onBeforeRouteLeave } from 'vue-router'
 import QuestionAndAnswers from '../atoms/QuestionAndAnswers.vue'
 import BtnAction from '../atoms/BtnAction.vue'
-import html2pdf from 'html2pdf.js'
+import jspdf from 'jspdf'
+import html2canvas from 'html2canvas'
 
 export default defineComponent({
   name: 'TestSheet',
@@ -64,6 +73,21 @@ export default defineComponent({
 
     setStore()
 
+    const createPdf = () => {
+      html2canvas(document.querySelector('#myScroll') as HTMLElement, {
+        allowTaint: true,
+        useCORS: true,
+      }).then(canvas => {
+        const img = canvas.toDataURL('image/png')
+        const doc = new jspdf({
+          unit: 'px',
+        })
+        doc.addImage(img, 'PNG', 7,0, 405, 605)
+        doc.save('my-test.pdf')
+
+      })
+
+    }
     const scrollToBeginning = () => {
       const myScroll = document.getElementById("myScroll")
       myScroll?.scrollIntoView({ behavior: "smooth" })
@@ -115,13 +139,6 @@ export default defineComponent({
       storeRu.currentPage = 1
     })
 
-    const export2Pdf = () => {
-      html2pdf(document.getElementById('myScroll'), {
-          filename: 'your-test.pdf',
-      })
-      console.log(html2pdf)
-    }
-
 
     return {
       store,
@@ -133,7 +150,7 @@ export default defineComponent({
       showNextQ,
       showPreviousQ,
       compare,
-      export2Pdf
+      createPdf
     }
   }
 })
