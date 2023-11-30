@@ -76,18 +76,17 @@ export default defineComponent({
     const createPdf = () => {
       html2canvas(document.querySelector('#myScroll') as HTMLElement, {
         allowTaint: true,
-        useCORS: true,
+        useCORS: true
       }).then(canvas => {
         const img = canvas.toDataURL('image/png')
         const doc = new jspdf({
           unit: 'px',
         })
-        doc.addImage(img, 'PNG', 7,0, 405, 605)
+        doc.addImage(img, 'PNG', 0, 0, 405, 615)
         doc.save('my-test.pdf')
-
       })
-
     }
+
     const scrollToBeginning = () => {
       const myScroll = document.getElementById("myScroll")
       myScroll?.scrollIntoView({ behavior: "smooth" })
