@@ -33,6 +33,7 @@ import QuestionAndAnswers from '../atoms/QuestionAndAnswers.vue'
 import BtnAction from '../atoms/BtnAction.vue'
 import jspdf from 'jspdf'
 import html2canvas from 'html2canvas'
+import html2pdf from "html2pdf.js";
 
 export default defineComponent({
   name: 'TestSheet',
@@ -74,18 +75,41 @@ export default defineComponent({
     setStore()
 
     const createPdf = () => {
-      html2canvas(document.querySelector('#myScroll') as HTMLElement, {
-        allowTaint: true,
-        useCORS: true
-      }).then(canvas => {
-        const img = canvas.toDataURL('image/png')
-        const doc = new jspdf({
-          unit: 'px',
-        })
-        doc.addImage(img, 'PNG', 0, 0, 405, 615)
-        doc.save('my-test.pdf')
-      })
+      const makepdf = document.getElementById("myScroll") as HTMLElement
+      const mywindow = window.open("", "PRINT", "height=600,width=600") as any
+         mywindow.document.write(makepdf.innerHTML);
+         mywindow.document.close();
+         mywindow.focus();
+         mywindow.print();
+
     }
+
+    // const createPdf = () => {
+    //   html2canvas(document.querySelector('#myScroll') as HTMLElement, {
+    //     useCORS: true,
+    //   }).then(canvas => {
+    //     const img = canvas.toDataURL('image/png')
+    //     const doc = new jspdf({
+    //       unit: 'px',
+    //       compress: true
+    //     })
+    //     doc.addImage(img, 'PNG', 0, 0, 405, 615)
+    //     doc.save('my-test.pdf')
+    //   })
+    // }
+
+    // const createPdf = () => {
+    //   const content = html2pdf(document.getElementById("myScroll"))
+    //   const opt = {
+    //     margin: 1,
+    //     filename: 'myfile.pdf',
+    //     image: { type: 'jpeg', quality: 0.98 },
+    //     html2canvas: { scale: 2 },
+    //     jsPDF: { 
+    //       orientation: 'landscape' }
+    //   }
+    //   html2pdf().set(opt).from(content).save();
+    // }
 
     const scrollToBeginning = () => {
       const myScroll = document.getElementById("myScroll")
