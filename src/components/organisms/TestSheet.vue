@@ -31,7 +31,7 @@ import { useTestsStore } from '@/stores/tests'
 import { useRoute, useRouter, onBeforeRouteLeave } from 'vue-router'
 import QuestionAndAnswers from '../atoms/QuestionAndAnswers.vue'
 import BtnAction from '../atoms/BtnAction.vue'
-import jspdf from 'jspdf'
+import jspdf, { jsPDF } from 'jspdf'
 import html2canvas from 'html2canvas'
 import html2pdf from "html2pdf.js";
 
@@ -77,11 +77,10 @@ export default defineComponent({
     const createPdf = () => {
       const makepdf = document.getElementById("myScroll") as HTMLElement
       const mywindow = window.open("", "PRINT", "height=600,width=600") as any
-         mywindow.document.write(makepdf.innerHTML);
-         mywindow.document.close();
-         mywindow.focus();
-         mywindow.print();
-
+      mywindow.document.write(makepdf.innerHTML)
+      mywindow.document.close()
+      mywindow.focus()
+      mywindow.print()
     }
 
     // const createPdf = () => {
