@@ -124,9 +124,9 @@ export default defineComponent({
     const createPdf = () => {
       const makePdf = document.getElementById("myScroll") as HTMLElement
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      const mywindow = window.open("", "PRINT", "height=600,width=600") as any // otwiera okno z opcjami zapisz-drukuj
-      mywindow.document.write(makePdf.innerHTML) // zwraca html jako tresc i zapisuje w dokumencie
-      mywindow.document.close() // zamyka to, co zrobilo open
+      const mywindow = window.open("", "PRINT", "height=600,width=600") as any
+      mywindow.document.write(makePdf.innerHTML)
+      mywindow.document.close()
       mywindow.focus()
       mywindow.print()
     }
