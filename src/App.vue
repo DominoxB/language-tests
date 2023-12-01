@@ -1,15 +1,15 @@
 <template>
-  <top-navbar />
+  <TopNavbar />
   <router-view></router-view>
-  <Footer />
+  <PageFooter />
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
 import TopNavbar from './components/organisms/TopNavbar.vue'
-import Footer from '@/components/atoms/Footer.vue'
+import PageFooter from '@/components/atoms/PageFooter.vue'
 export default defineComponent({
   name: 'App',
-  components: { TopNavbar, Footer }
+  components: { TopNavbar, PageFooter }
 })
 </script>
