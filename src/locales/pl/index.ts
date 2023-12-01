@@ -74,7 +74,8 @@ const pl = {
     title: 'C2 - poziom profesjonalny/native',
     description: 'Osoba posługująca się językiem na tym poziomie może z łatwością zrozumieć praktycznie wszystko, co usłyszy lub przeczyta. Potrafi streszczać informacje z innych źródeł, pisanych lub mówionych w sposób spójny, odtwarzając zawarte w nich tezy i wyjaśnienia. Potrafi wyrażać swoje myśli bardzo płynnie, spontanicznie i precyzyjnie, subtelnie różnicując odcienie znaczeniowe nawet w bardziej złożonych wypowiedziach.'
   },
-  solveAgain: 'Rozwiąż test ponownie'
+  solveAgain: 'Rozwiąż test ponownie',
+  downloadPDF: 'Pobierz PDF'
 }
 
 export default pl;

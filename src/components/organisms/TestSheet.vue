@@ -12,7 +12,7 @@
     </div>
   </div>
   <div v-else>
-    <BtnAction v-if="testStore.showAnswers" class="xl:mt-12" name="Pobierz PDF" @click="createPdf" />
+    <BtnAction v-if="testStore.showAnswers" class="mt-4 xl:mt-12" :name="$t('downloadPDF')" @click="createPdf" />
     <div id="myScroll" v-for="question in questions" :key="question.id">
       <QuestionAndAnswers :id="question.id" :question="question.q" :answerA="question.a" :answerB="question.b"
         :answerC="question.c" :answerD="question.d">

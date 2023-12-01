@@ -31,7 +31,7 @@ const en = {
   introResult1: 'Below you will find your result: number of points, percentage and assignment to the level along with its description. We hope you are satisfied :)',
   introResult2: 'If not, remember that people learn throughout their lives and it is never too late to learn a language. You are in perfect time to do it :)',
   resultTest: 'Your result:',
-  checkAnswers: 'Check answers',
+  checkAnswers: 'Check answers and download PDF file',
   us: 'About us',
   tutors: 'We are a group of friends passionate about learning a foreign language. Each of us has pedagogical and philological education, so we can say that we are specialists in this topic :) Our group includes graduates of Oxford, as well as outstanding Polish universities, such as the Nicolaus Copernicus University in Toruń, the University of Gdańsk, and the Jagiellonian University in Krakow. Years of experience as teachers/tutors, gave us a lot of inspiration and allowed us to observe what problems arise while learning, but above all, how to deal with them. Thanks to this, we will find a solution even for those of you for whom learning a foreign language has always been a nuisance.',
   ourTests: "The tests we prepare are a test of the student's basic skills. A wide range of topics and grammar gives us an excellent picture of the direction in which further learning should take place. If you want to make a cooperation or check what we have to offer, contact us after taking the test. We will be able to analyze your problems together and check when you need support. The first meeting, including discussion of the placement test, is free :). Languages ​​with us will no longer be strange!",
@@ -74,7 +74,8 @@ const en = {
     title: 'C2 - professional/native level',
     description: 'A person who speaks the language at this level can easily understand almost everything he hears or reads. Can summarize information from other sources, written or spoken, in a coherent manner, reconstructing the theses and explanations contained therein. He can express his thoughts very fluently, spontaneously and precisely, subtly differentiating shades of meaning even in more complex statements.'
   },
-  solveAgain: 'Solve the test again'
+  solveAgain: 'Solve the test again',
+  downloadPDF: 'Download PDF file'
 }
 
 export default en;
