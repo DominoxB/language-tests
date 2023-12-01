@@ -31,7 +31,6 @@ import { useTestsStore } from '@/stores/tests'
 import { useRoute, useRouter, onBeforeRouteLeave } from 'vue-router'
 import QuestionAndAnswers from '../atoms/QuestionAndAnswers.vue'
 import BtnAction from '../atoms/BtnAction.vue'
-
 export default defineComponent({
   name: 'TestSheet',
   components: { QuestionAndAnswers, BtnAction },

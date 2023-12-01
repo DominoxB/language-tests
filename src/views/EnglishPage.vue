@@ -15,7 +15,6 @@ import { useTestsStore } from '@/stores/tests'
 import LanguageTile from '@/components/atoms/LanguageTile.vue'
 import InfoTest from '@/components/organisms/InfoTest.vue'
 import BtnArrowDown from '@/components/atoms/BtnArrowDown.vue'
-
 export default defineComponent({
   name: 'EnglishPage',
   components: {

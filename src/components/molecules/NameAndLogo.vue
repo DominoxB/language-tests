@@ -6,10 +6,3 @@
     </div>
   </router-link>
 </template>
-
-<script lang="ts">
-import { defineComponent } from 'vue'
-export default defineComponent({
-  name: 'NameAndLogo'
-})
-</script>

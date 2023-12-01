@@ -1,5 +1,6 @@
 <template>
-  <div class="font-open border-2 border-blue-200 text-justify p-4 lg:p-10 my-10 lg:my-20 mx-4 xl:mx-64" id="myScroll" v-if="!storeTests.showAnswers">
+  <div class="font-open border-2 border-blue-200 text-justify p-4 lg:p-10 my-10 lg:my-20 mx-4 xl:mx-64" id="myScroll"
+    v-if="!storeTests.showAnswers">
     <div class="text-2xl md:text-3xl text-center" v-if="path === '/EnglishPage'">{{ $t('wantEnglish') }}</div>
     <div class="text-3xl text-center" v-else>{{ $t('wantRussian') }}</div>
     <p class="py-6">{{ $t('info1') }}</p>
@@ -16,10 +17,9 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import { useRoute } from 'vue-router'
+import { useTestsStore } from '@/stores/tests'
 import BtnStart from '@/components/atoms/BtnStart.vue'
 import TestSheet from './TestSheet.vue'
-import { useTestsStore } from '@/stores/tests'
-
 export default defineComponent({
   name: 'InfoTest',
   components: {

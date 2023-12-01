@@ -1,5 +1,5 @@
 <template>
-  <IntroResult id="myScroll"/>
+  <IntroResult id="myScroll" />
   <div class="font-open border-2 border-blue-400 py-10 my-20 mx-4 xl:mx-72 px-4 md:px-16">
     <div class="xl:flex xl:space-x-20 items-center">
       <div>
@@ -7,11 +7,11 @@
         <p class="py-6 text-xl text-blue//-500 font-bold uppercase">{{ level.title }}</p>
         <p>{{ level.description }}</p>
       </div>
-      <LevelSign :text="level.name" class="flex justify-center my-8"/>
+      <LevelSign :text="level.name" class="flex justify-center my-8" />
     </div>
     <div class="flex justify-center space-x-8">
-      <BtnAction class="xl:mt-12" :name="$t('solveAgain')" @click="testAgain"/>
-      <BtnAction class="xl:mt-12" :name="$t('checkAnswers')" @click="showMyTest"/>
+      <BtnAction class="xl:mt-12" :name="$t('solveAgain')" @click="testAgain" />
+      <BtnAction class="xl:mt-12" :name="$t('checkAnswers')" @click="showMyTest" />
     </div>
   </div>
 </template>
@@ -25,14 +25,13 @@ import { useTestsStore } from '@/stores/tests'
 import LevelSign from '@/components/atoms/LevelSign.vue'
 import BtnAction from '@/components/atoms/BtnAction.vue'
 import IntroResult from '@/components/atoms/IntroResult.vue'
-
 export default defineComponent({
   name: 'ResultPage',
   components: {
     LevelSign,
     BtnAction,
     IntroResult
- },
+  },
   setup() {
     const storeAnswers = useUserAnswersStore()
     const { counter } = storeAnswers
@@ -101,7 +100,7 @@ export default defineComponent({
       if (to.path === '/RussianPage' && from.path === '/ResultPage' && test.value !== 'russian' ||
         to.path === '/EnglishPage' && from.path === '/ResultPage' && test.value !== 'english') {
         storeAnswers.$reset()
-      } 
+      }
     })
 
     return {

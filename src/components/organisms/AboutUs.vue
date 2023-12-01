@@ -13,7 +13,7 @@
       <img src="https://cdn-icons-png.flaticon.com/128/6571/6571437.png" alt="result" class="mr-10 h-24" />
       <p>{{ $t('result') }}</p>
     </div>
-    <BtnArrowDown class="mx-auto animate-bounce hidden md:flex" @scroll="scrollEnd"/>
+    <BtnArrowDown class="mx-auto animate-bounce hidden md:flex" @scroll="scrollEnd" />
   </div>
 </template>
 
