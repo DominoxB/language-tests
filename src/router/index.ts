@@ -8,7 +8,7 @@ import AboutUsPage from "@/views/AboutUsPage.vue"
 const router = createRouter({
   history: createWebHistory(),
   routes: [
-    { path: "/", component: HomePage },
+    { path: "/language-tests", component: HomePage },
     { path: "/EnglishPage", name: 'English',  component: EnglishPage },
     { path: "/RussianPage", name: 'Russian', component: RussianPage },
     { path: "/ResultPage", name: 'Result', component: ResultPage },
